@@ -1,0 +1,14 @@
+#iqitcompare-floating{
+  @include st2(background, $cp_float_bg);
+  border-top: $cp_float_border;
+  border-left: $cp_float_border;
+  border-right: $cp_float_border;
+  @if $cp_float_boxshadow != none {
+    box-shadow: $cp_float_boxshadow;
+  }
+  a{
+    @include st2(color, $cp_float_txt);
+  }
+}
+
+

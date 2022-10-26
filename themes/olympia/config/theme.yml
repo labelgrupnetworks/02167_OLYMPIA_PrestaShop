@@ -1,0 +1,15 @@
+parent: warehouse
+name: olympia
+display_name: Olympia theme - Warehouse child
+version: 1.0
+author:
+  name: "Labelgrup Networks"
+assets:
+  use_parent_assets: true
+  css:
+    all:
+      - id: font-awesome
+        path: assets/css/font-awesome/css/font-awesome.css
+        media: all
+        priority: 200
+

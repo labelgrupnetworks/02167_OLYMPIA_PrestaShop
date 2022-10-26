@@ -1,0 +1,101 @@
+.swiper-button-arrow{
+
+}
+
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  padding: 1rem .7rem;
+  margin-top: -30px;
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: .7;
+  transition: $default-transition;
+  &.swiper-button-disabled {
+    opacity: 0.2;
+    cursor: auto;
+  }
+  &:after {
+    font-family: FontAwesome;
+    font-size: 36px;
+    text-transform: none !important;
+    letter-spacing: 0;
+    text-transform: none;
+    font-variant: initial;
+    line-height: 1;
+  }
+}
+.swiper-button-prev,
+.swiper-container-rtl .swiper-button-next {
+  &:after {
+    content: "\F104";
+  }
+  left: 0px;
+  right: auto;
+}
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev {
+  &:after {
+    content: "\F105";
+  }
+  right: 0px;
+  left: auto;
+}
+.swiper-button-lock {
+  display: none;
+}
+
+.swiper-button-inner-prev,
+.swiper-container-rtl .swiper-button-inner-next {
+  left: 1rem;
+  right: auto;
+}
+.swiper-button-inner-next,
+.swiper-container-rtl .swiper-button-inner-prev {
+  right: 1rem;
+  left: auto;
+}
+
+//inside
+
+.swiper-arrows-inside .swiper-button-prev,
+  .swiper-arrows-inside.swiper-container-rtl .swiper-button-next {
+    &:after {
+      content: "\F104";
+    }
+    left: 20px;
+    right: auto;
+  }
+.swiper-arrows-inside .swiper-button-next,
+  .swiper-arrows-inside.swiper-container-rtl .swiper-button-prev {
+    &:after {
+      content: "\F105";
+    }
+    right: 20px;
+    left: auto;
+  }
+
+
+//above
+.swiper-arrows-above{
+  .swiper-button{
+    top: 0;
+    padding: 0;
+    width: 1.8rem;
+    height: 1.8rem;
+    transform: none;
+    &:after{
+      font-size: 1.2rem;
+      line-height: 0.8rem;
+    }
+  }
+  .swiper-button-prev{
+    left: auto;
+    right: 2rem;
+  }
+}

@@ -1,0 +1,325 @@
+
+
+/************************************************
+ * REVOLUTION 6.0.0 BUILDER CLASSES RTL SUPPORT
+ * @version: 1.0 (12.06.2017)
+ * @author ThemePunch
+************************************************/
+
+/* GENERAL */
+body.lang-rtl .rfloated { float: left }
+
+body.lang-rtl #responsive_infos_toolbar .material-icons, 
+body.lang-rtl #objectlibrary .material-icons, 
+body.lang-rtl #rb_tlw .material-icons, 
+body.lang-rtl #rs_overview .material-icons, 
+body.lang-rtl #filedrop .material-icons, .material-icons {  }
+
+body.lang-rtl #rb_tlw .icon_trigger_wrap .icon_trigger i, 
+body.lang-rtl #rb_tlw .icon_trigger_wrap .icon_switcher i,
+body.lang-rtl .shortcut_cmdctrl,
+body.lang-rtl #the_container .do_title_layer_icon, 
+body.lang-rtl #the_container .do_title_slide_icon,
+body.lang-rtl .olti_icon.material-icons,
+body.lang-rtl #obj_fil_favorite i.material-icons, 
+body.lang-rtl #obj_updatefromserver i.material-icons { margin-right: 0px; margin-left: 5px; }
+
+body.lang-rtl .basic_action_coloredbutton i, 
+body.lang-rtl .basic_action_button i,
+body.lang-rtl .sle_description i.material-icons,
+body.lang-rtl .toolbar_btn .material-icons,
+body.lang-rtl #rs_overview i.material-icons.reset_select, 
+body.lang-rtl #objectlibrary i.material-icons.reset_select,
+/*body.lang-rtl .olti_content .tponoffwrap,*/
+body.lang-rtl .olti_btn i.material-icons,
+body.lang-rtl #ol_results .rsl_breadcrumb i.material-icons,
+body.lang-rtl .ol_filter_listelement i.material-icons,
+body.lang-rtl .rso_scrollmenuitem i.material-icons,
+body.lang-rtl .rbm_darkbutton i.material-icons,
+body.lang-rtl .mdl_group_member i.material-icons, 
+body.lang-rtl .mdl_group_member i.fa__icons, 
+body.lang-rtl .lal_group_member i.material-icons,
+body.lang-rtl .mdl_group_header i.fa__icons, 
+body.lang-rtl .mdl_group_header i.material-icons, 
+body.lang-rtl .lal_group_header i.material-icons,
+body.lang-rtl .box_with_icon i.material-icons { margin-right: 0px; margin-left: 10px; }
+
+body.lang-rtl .quick_colorchange_dark { left: 40px; right: auto; }
+body.lang-rtl .quick_colorchange_light { left: 18px; right: auto; }
+
+body.lang-rtl .qse_boxshadow { left: auto; right: 50px; }
+
+
+body.lang-rtl .mdl_group_header i.material-icons.accordiondrop, 
+body.lang-rtl .lal_group_header i.material-icons.accordiondrop { left: 5px; right: auto; }
+
+body.lang-rtl i.rbm_symbol.material-icons,
+body.lang-rtl label_sub, body.lang-rtl .label_sub, 
+body.lang-rtl label_short, body.lang-rtl .label_short, 
+body.lang-rtl label_a_left, body.lang-rtl .label_a_left, 
+body.lang-rtl label_a_right, body.lang-rtl .label_a_right, 
+body.lang-rtl xy_label, body.lang-rtl .xy_label, 
+body.lang-rtl label_full, body.lang-rtl .label_full, 
+body.lang-rtl label_a, body.lang-rtl .label_a,
+body.lang-rtl .form_collector .form_inner_header .material-icons { margin-right: 0px; margin-left: 15px; }
+
+body.lang-rtl label_sub, body.lang-rtl .label_sub, 
+body.lang-rtl label_short, body.lang-rtl .label_short, 
+body.lang-rtl label_a_left, body.lang-rtl .label_a_left, 
+body.lang-rtl label_a_right, body.lang-rtl .label_a_right, 
+body.lang-rtl xy_label, body.lang-rtl .xy_label, 
+body.lang-rtl label_full, body.lang-rtl .label_full, 
+body.lang-rtl label_a, body.lang-rtl .label_a { text-align: left; }
+
+body.lang-rtl #do_title_layer, 
+body.lang-rtl #do_title_slide, 
+body.lang-rtl #do_title_layer_not_selected { margin-left: 20px; margin-right: 0px; }
+
+
+body.lang-rtl .fake_onff_on, 
+body.lang-rtl .tponoff_on { left: 122px; }
+
+body.lang-rtl #rb_tlw .select2RS-container .select2RS-selection,
+body.lang-rtl .select2RS-container .select2RS-results__option { text-align: right }
+
+body.lang-rtl #slide_thumb_repeater { left: auto; right: 105px; }
+body.lang-rtl .slidetab_toolbox { left: 0px; right: auto; }
+/*
+body.lang-rtl .fake_onff_off, 
+body.lang-rtl .tponoff_off { left: 58px; }
+
+body.lang-rtl .fake_onff_off:after, 
+body.lang-rtl .tponoff_off:after { left: 45px; }*/
+
+body.lang-rtl .select2RS-container[dir="rtl"] .select2RS-selection--single .select2RS-selection__rendered { padding-left: 0px; padding-right: 0px; }
+body.lang-rtl .select2RS-container[dir="rtl"] .select2RS-selection--single .select2RS-selection__arrow {  }
+
+body.lang-rtl .rs_overview .select2RS-container { padding-left: 25px; padding-right: 0px; }
+
+body.lang-rtl #rb_tlw .select2RS-container .select2RS-selection--single .select2RS-selection__arrow { left: 0px; right: auto; border-right: 1px solid #323438; border-left: none }
+body.lang-rtl label_icon, label_bigicon { margin-left: 5px; margin-right: 0px; }
+
+body.lang-rtl label_icon.ui_centeralign,
+body.lang-rtl label_icon.ui_bottomalign,
+body.lang-rtl label_icon.ui_middlealign,
+body.lang-rtl label_icon.ui_leftalign,
+body.lang-rtl label_icon.ui_topalign,
+body.lang-rtl label_icon.ui_rightalign { margin-right: 0px; margin-left: 0px }
+body.lang-rtl label_icon.singlerow, 
+body.lang-rtl onelong .label_mi.material-icons:first-child, 
+body.lang-rtl onelong label_icon:first-child { margin-right: 60px; }
+body.lang-rtl onelong { padding-left: 10px; padding-right: 0px; }
+body.lang-rtl longoption label_a,
+body.lang-rtl .basic_action_coloredbutton, 
+body.lang-rtl .basic_action_button { text-align: right }
+
+body.lang-rtl longoption .tponoffwrap, 
+body.lang-rtl longoption .fake_on_button { float: left;  margin:9px 0px 0px 10px;}
+body.lang-rtl .lp10 { padding-left: 0px; padding-right: 10px; }
+body.lang-rtl longoption i.material-icons { margin-right: 15px; margin-left: 0px; }
+body.lang-rtl longoption label_a { margin-right: 10px; }
+body.lang-rtl #rb_tlw .radiooption label_sub, 
+body.lang-rtl #rb_tlw .radiooption .label_sub { padding-left: 0px; padding-right:30px;}
+body.lang-rtl  #rb_tlw .radiooption label_sub:before, 
+body.lang-rtl  #rb_tlw .radiooption .label_sub:before { left: auto; right: 0px; }
+body.lang-rtl oneabsolute { left: auto; right: 0px; }
+body.lang-rtl #rb_tlw .radiooption input[type=radio] { margin: 5px -2px 0px 10px; }
+body.lang-rtl labelhalf { text-align: left; }
+
+body.lang-rtl .emc_toggle_inner.ps>.rs__scrollbar-y-rail { left: 0px !important;right: auto !important; }
+
+body.lang-rtl .rbm_content.ps>.rs__scrollbar-y-rail,
+body.lang-rtl #quick_style_scrollable.ps>.rs__scrollbar-y-rail,
+body.lang-rtl #layeraction_list.ps>.rs__scrollbar-y-rail,
+body.lang-rtl #rbm_addon_details.ps>.rs__scrollbar-y-rail,
+body.lang-rtl #rbm_addonlist.ps>.rs__scrollbar-y-rail  { right: 0px !important; }
+body.lang-rtl .mr10 { margin-right: 0px; margin-left: 10px; }
+body.lang-rtl .buttonextenstion { left: 0px; right: auto; }
+body.lang-rtl #rb_tlw .input_with_buttonextenstion .select2RS-container .select2RS-selection--single .select2RS-selection__arrow { left: 35px; }
+body.lang-rtl #slide_bg_image_path { float: right; }
+body.lang-rtl .basic_action_button.onlyicon i { margin-right: 6px; margin-left: 0px; }
+body.lang-rtl .bg_align_xy { right: 68px; left: auto; }
+
+
+/* OVERVIEW PAGE */
+body.lang-rtl #rs_overview_menu { padding-right: 75px; padding-left: 0px; margin-right: -20px; margin-left: 0px; }
+body.lang-rtl .rso_scrollmenuitem { margin-right: 0px; margin-left: 50px; }
+body.lang-rtl #new_blank_slider { margin-right:0px; }
+body.lang-rtl #add_on_management { margin-right:20px; }
+body.lang-rtl .overview_elements { margin-right: 0px; margin-left: -30px; }
+body.lang-rtl .rs_library_element { margin-right: 0px; margin-left: 20px; }
+body.lang-rtl .ov-pagination { margin-right: 0px; margin-left: 20px; }
+body.lang-rtl .page_button { margin-right: 0px; margin-left: 5px; }
+body.lang-rtl .rs_fh_right { float: left; }
+body.lang-rtl .rs_fh_left { float: right; }
+body.lang-rtl grayiconbox { margin-right: 0px; margin-left:20px;}
+body.lang-rtl blueiconbox.blueiconongray { margin-right: -34px; margin-left:20px;}
+body.lang-rtl .pli_left { padding-right: 0px; padding-left: 80px;     border-left: 1px solid #323438; border-right: none }
+body.lang-rtl .pli_right { padding-left: 0px; padding-right: 30px; }
+body.lang-rtl .system_requirement, 
+body.lang-rtl .pli_update_history li { padding-left: 0px; padding-right: 40px; }
+body.lang-rtl .pli_update_history ul { padding-left: 0px; padding-right: 20px; }
+body.lang-rtl .pli_update_history li:before { float: right; left:auto; right:17px; margin-right:0px; margin-left:20px;}
+body.lang-rtl .pli_update_history .newfeature:before { margin-right: 0px; margin-left: 20px }
+body.lang-rtl .system_requirement { padding: 0px; }
+body.lang-rtl #rs_overview .system_requirement>i.material-icons { margin-left: 10px; margin-right: 0px; }
+body.lang-rtl .system_requirement darkiconbox { left: 30px; right: auto; }
+body.lang-rtl .box_with_icon:focus, .box_with_icon { text-align: right; }
+body.lang-rtl .rs_overview .select2RS-container { margin-left: 40px; margin-right: 0px; }
+
+body.lang-rtl .rsle_folder { left: 0px; right: auto; text-align:left; padding-left:10px; padding-right:0px;}
+body.lang-rtl .rs_library_element .title_container { right: 0px; left: auto; }
+
+body.lang-rtl .show_rsle { left: 0px; padding-left: 10px; padding-right: 0px; right: auto;  text-align: left;}
+
+body.lang-rtl #decmod_do_btn { margin-left: 10px !important; margin-right: 0px !important}
+
+body.lang-rtl .rbm_darkhalfbutton i.material-icons { margin-right: 0px; margin-left: 10px; }
+
+body.lang-rtl #rs_ne_ce_wrap { left: 0px;  right:auto;}
+
+body.lang-rtl #rs_ne_helper_wrap { padding-right: 30px; }
+
+body.lang-rtl #rs_ne_meta_values_inner .rs_ne_nskin_tbar_basic { right: auto; left: 0px; text-align: left; }
+
+body.lang-rtl #rs_ne_cssmeta_config label_a { text-align: right }
+
+
+body.lang-rtl #no_layer_selected .material-icons { margin-left: 10px; margin-right: 0px }
+
+
+/* OBJECT LIBRARY CHANGES */
+body.lang-rtl #ol_filters_wrap { right: 0px; left: auto; }
+body.lang-rtl #ol_right { padding: 90px 300px 70px 0px; }
+body.lang-rtl #objectlibrary .rb_the_logo { right: 15px; left: auto; }
+body.lang-rtl #ol_header { padding: 10px 300px 10px 30px;}
+body.lang-rtl #obj_updatefromserver { margin-left: 0px; margin-right: 20px; }
+body.lang-rtl #ol_close { margin-left: 0px; margin-right: 20px; }
+body.lang-rtl #ol_footer { left: auto; right: 0px; }
+body.lang-rtl .olibrary_item { margin-right: 0px; margin-left: 20px; }
+body.lang-rtl #objectlibrary.rs_overview .select2RS-container { margin-right: 40px; margin-left: 0px; }
+
+body.lang-rtl #keyframe_list_el_frame_0 .keyframe_CP_wrap { right: 280px; }
+
+body.lang-rtl .load_anim_value_wrap { padding: 10px 0px 0px; }
+/* EDITOR */
+
+body.lang-rtl .toolbar_rightoriented {  left:0px; right:auto;}
+
+/*body.lang-rtl #main_hor_toolbar,
+body.lang-rtl #timeline_settings,
+body.lang-rtl #the_editor { padding: 0px 0px 0px 320px; }*/
+/*body.lang-rtl #the_right_toolbar { left: 0px; right: auto; }*/
+/*body.lang-rtl #save_slider { left: 0px; right: auto; }*/
+
+body.lang-rtl #timeline_settings,
+body.lang-rtl #timeline,
+body.lang-rtl #frame_copypaste_tool,
+body.lang-rtl .keyframe_CP_wrap,
+body.lang-rtl .tponoffwrap.off { direction: ltr; }
+body.lang-rtl .quick_style_wrap,
+body.lang-rtl .mht_inner { border-left: 1px solid #202224; border-right:none;}
+body.lang-rtl .layertoolbar_wrap { margin-left: -440px; }
+body.lang-rtl .toolbar_listelement, 
+body.lang-rtl .toolkit_selector, 
+body.lang-rtl .screen_selector,
+body.lang-rtl .outicon_dd_rwap, 
+body.lang-rtl .tool_dd_wrap,
+body.lang-rtl .slide_list_element,
+body.lang-rtl .sle_description { text-align: right }
+body.lang-rtl .toolbar_dd_subdrop { left: auto;right: 100%; }
+body.lang-rtl .outicon_dd_rwap, 
+body.lang-rtl .tool_dd_wrap { left: auto; right: 0px; }
+body.lang-rtl .sle_thumb { right: 200px; left: auto; }
+body.lang-rtl .shortcuttext { left: 16px; right: auto; float:left;}
+body.lang-rtl .toolbar_listelement .material-icons, 
+body.lang-rtl .toolkit_selector .material-icons, 
+body.lang-rtl .screen_selector .material-icons { margin-left: 15px; margin-right: 0px; }
+body.lang-rtl #_layer_settings .tool_drop { padding-right: 20px; padding-left: 0px; }
+body.lang-rtl .toolbar_rightoriented .tool_dd_wrap { margin-right: -49px; margin-left: 0px; }
+body.lang-rtl .toolbar_rightoriented #main_screenselector .tool_dd_wrap { margin-left: 0px; margin-right: -99px; }
+
+body.lang-rtl .toolkit_selector .near_me_addon { right: 28px; left: auto; }
+
+body.lang-rtl .icon_trigger_wrap,
+body.lang-rtl .on_off_navig_wrap { left: 0px; right: auto; }
+
+body.lang-rtl #kenburn_timeline { margin-left: 9px; margin-right: 0px; }
+body.lang-rtl #kenburn_simulator { margin-left: 4px; margin-right:0px;}
+
+body.lang-rtl .input_presets_dropdown { left: 0px; right: auto;}
+body.lang-rtl .input_preset i.material-icons{ margin-left:10px !important; margin-right:0px !important}
+
+body.lang-rtl li .right-divided-icon { left: 0px; right: auto;}
+
+body.lang-rtl li.added_slide_transition >i.transition-replace { left: 30px; border-left: 1px solid rgba(0,0,0,0.2);; border-right: none; right: auto;}
+body.lang-rtl .right-divided-icon { left: 0px; right: auto;}
+
+body.lang-rtl #screen_selector_top_list .screen_selector .tponoffwrap {   left:10px; right:auto;}
+ 
+
+/* ADD ONS */
+body.lang-rtl #rbm_addon_details .rs__scrollbar-x-rail { left: 0px !important; }
+body.lang-rtl i.rbm_close.material-icons { left: 0px; right: auto; }
+body.lang-rtl #check_addon_updates { right: 820px; left: auto; }
+body.lang-rtl #rbm_addon_details { left: 0px; right: auto; }
+body.lang-rtl #rbm_configpanel_savebtn { left: 0px; right: auto; }
+
+/* CSS EDITOR */
+body.lang-rtl #form_module_advanced_api { direction: ltr; }
+body.lang-rtl #form_module_advanced_api label_a { margin-left: 0px; margin-right: 15px; }
+body.lang-rtl #form_module_advanced_api .basic_action_button i { margin-left: 0px; margin-right: 5px }
+/*body.lang-rtl .emc_toggle_wrap { left: -40px; right:auto; border-right:1px solid #000; transition:left 0.5s; border-left:0px;}
+body.lang-rtl .emc_toggle_wrap.open { left: -351px; right:auto;}
+body.lang-rtl #emc_toggle { left: 0px; right: auto; }*/
+
+
+
+/* ACTIONS */
+body.lang-rtl .sla_actionname { max-width: 151px; float: left; }
+body.lang-rtl .sla_icon.material-icons { margin-left: 10px; margin-right: 5px; }
+
+/* METAAS */
+body.lang-rtl #mdl_group_wrap_menu { text-align: left }
+
+/* FRAME ANIMATIONS */
+body.lang-rtl #le_keyframes_list_innerwrap li:nth-child(2) { right: 173px; left: auto; }
+body.lang-rtl #le_keyframes_list_innerwrap li:nth-child(2) .frame_list_title { border-radius: 4px 0px 0px 4px; border-right: 2px solid #323438; border-left: none }
+body.lang-rtl #le_keyframes_list_innerwrap li:nth-child(1) .frame_list_title { border-radius: 0px 4px 4px 0px; }
+body.lang-rtl #le_keyframes_list_innerwrap .frame_list_id { text-align: left }
+body.lang-rtl .frame_list_title { margin-left: 0px; margin-right:5px; }
+body.lang-rtl .animation_drop_arrow { left: 0px; right: auto; }
+body.lang-rtl .custom_layer_animation_toolbar { left: 5px; right: auto; }
+
+body.lang-rtl .add_frame_after, 
+body.lang-rtl .add_frame_before { left: 0px; right: auto; }
+
+body.lang-rtl .add_frame_after:after, 
+body.lang-rtl .add_frame_before:after { border-width: 10px 0px 10px 13px; border-color: transparent  transparent transparent #006dd2; right: -7rpx; left: auto; }
+
+
+body.lang-rtl #rso_menu_notices { left: 94px; right: auto; }
+body.lang-rtl #rs_notices_wrapper { left: 0px; right:auto; }
+
+/* LAYERS */
+body.lang-rtl ._group_lock_toggle_ { left: 0px; right: auto; }
+
+body.lang-rtl .undo_redo_wrap .tool_dd_wrap:before {
+	left: 0px; right: auto;
+	 background: linear-gradient(to left, rgba(41,44,46,0) 0%, rgba(41,44,46,1) 100%);
+}
+
+@media only screen and (max-width: 1365px) {
+  body.lang-rtl #add_layer_toolbar_wrap {
+      margin-left: 10px;
+      margin-right:0px
+  }
+}
+
+@media only screen and (max-width: 1325px) {
+  body.lang-rtl .toolbar_rightoriented #toolkit_selector_wrap .tool_dd_wrap {margin-right: -99px; margin-left:0px;}
+  body.lang-rtl .toolbar_rightoriented .tool_dd_wrap {margin-right: -129px;margin-left:0px;}
+  body.lang-rtl .toolbar_rightoriented #main_screenselector .tool_dd_wrap { margin-right: -159px !important; margin-left:0px !important;}
+}
+
+

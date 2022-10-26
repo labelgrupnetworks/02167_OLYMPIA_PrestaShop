@@ -1,0 +1,38 @@
+.iqitsociallogin-colors-native .btn-facebook{
+    background: #4267B2 !important;
+    color: #fff !important;
+}
+.iqitsociallogin-colors-native .btn-google{
+    background: #4285F4 !important;
+    color: #fff !important;
+    position: relative;
+    padding-left: 45px;
+}
+.iqitsociallogin-colors-native .btn-google span{
+    background: #fff;
+    position: absolute;
+    left: 1px;
+    top:1px;
+    bottom: 1px;
+    padding: 7px;
+}
+.iqitsociallogin-colors-native .btn-twitter{
+    background: #00aced!important;
+    color: #fff!important;
+}
+.iqitsociallogin-colors-native .btn-instagram{
+    background: #8e1a52!important;
+    color: #fff!important;
+}
+.iqitsociallogin-colors-native .btn-iqitsociallogin:hover {
+ opacity: 0.8;
+}
+
+.iqitsociallogin i{
+    font-size: 18px;
+}
+.iqitsociallogin img{
+    width: 18px;
+    height: auto;
+}
+

@@ -1,0 +1,31 @@
+//checkut
+
+@if $checkout_header == simple {
+  #checkout #header {
+      display: none !important;
+  }
+}
+
+@if ($checkout_footer == simple) or ($checkout_footer == hidden){
+  #checkout #footer, #checkout #iqitcompare-floating-wrapper{
+    display: none !important;
+  }
+}
+
+$checkout_colors: 0 !default;
+@if $checkout_colors == 1 {
+  #checkout #wrapper {
+    @include st2(background, $checkout_colors_bg);
+
+  }
+  #checkout .card,  #checkout section.checkout-step {
+    @include st2(background, $checkout_colors_bg_box);
+    @include st2(color, $checkout_colors_txt_box);
+
+    a:link:not(.nav-link):not(.btn), a:visited:not(.nav-link):not(.btn){
+      @include st2(color, $checkout_colors_txt_box);
+    }
+  }
+}
+
+

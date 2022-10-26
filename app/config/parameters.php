@@ -1,0 +1,25 @@
+<?php return array (
+  'parameters' => 
+  array (
+    'database_host' => '127.0.0.1',
+    'database_port' => '',
+    'database_name' => 'olympia_bbdd',
+    'database_user' => 'olympia',
+    'database_password' => 'Fsa3H4t4NsFSaSmG#',
+    'database_prefix' => 'ps_',
+    'database_engine' => 'InnoDB',
+    'mailer_transport' => 'smtp',
+    'mailer_host' => '127.0.0.1',
+    'mailer_user' => NULL,
+    'mailer_password' => NULL,
+    'secret' => '17osLSrmocFwEtFW3ZxNoOPVm57zS0WPanfBhZZEJOYKiST86sNBecfJ3RA4qQu3',
+    'ps_caching' => 'CacheMemcache',
+    'ps_cache_enable' => false,
+    'ps_creation_date' => '2022-10-26',
+    'locale' => 'es-ES',
+    'use_debug_toolbar' => true,
+    'cookie_key' => 'cGW2pvSIZgn10JUNDJ1Tg8JjWq5PqnDsiw2hDviROPZ7nwAbqTM8ucA0ihBuQiH1',
+    'cookie_iv' => 'dbJsRi87XARoMzoJBv6Xk3CEzAAkpNf6',
+    'new_cookie_key' => 'def00000b300fa4d8b2623f78a09d91c68ce5d67fa82fa4c8f3dde61d2c180d8a684f35088956d0d0c9c1434131b7103d48975b4dca702ea4ebac13b342cd87706f04c2d',
+  ),
+);

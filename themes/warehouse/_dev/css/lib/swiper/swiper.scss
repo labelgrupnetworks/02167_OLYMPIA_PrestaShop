@@ -1,0 +1,156 @@
+@import "swiper-vars";
+@import "_components/pagination";
+@import "_components/navigation";
+@import "_components/other";
+
+
+.swiper-container {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  /* Fix of Webkit flickering */
+  z-index: 1;
+}
+.swiper-container-vertical > .swiper-wrapper {
+  flex-direction: column;
+}
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  box-sizing: content-box;
+}
+.swiper-container-android .swiper-slide,
+.swiper-wrapper {
+  transform: translate3d(0px, 0, 0);
+}
+.swiper-container-multirow > .swiper-wrapper {
+  flex-wrap: wrap;
+}
+.swiper-container-multirow-column > .swiper-wrapper {
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.swiper-container-free-mode > .swiper-wrapper {
+  transition-timing-function: ease-out;
+  margin: 0 auto;
+}
+.swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition-property: transform;
+}
+.swiper-slide-invisible-blank {
+  visibility: hidden;
+}
+/* Auto Height */
+.swiper-container-autoheight {
+  &,
+  .swiper-slide {
+    height: auto;
+  }
+
+  .swiper-wrapper {
+    align-items: flex-start;
+    transition-property: transform, height;
+  }
+}
+
+/* CSS Mode */
+.swiper-container-css-mode {
+  > .swiper-wrapper {
+    overflow: auto;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  > .swiper-wrapper > .swiper-slide {
+    scroll-snap-align: start start;
+  }
+}
+.swiper-container-horizontal.swiper-container-css-mode {
+  > .swiper-wrapper {
+    scroll-snap-type: x mandatory;
+  }
+}
+.swiper-container-vertical.swiper-container-css-mode {
+  > .swiper-wrapper {
+    scroll-snap-type: y mandatory;
+  }
+}
+
+
+//custom
+.swiper-default-carousel, .products.swiper-container{
+  overflow: visible
+}
+.swiper-container-wrapper{
+  overflow: hidden;
+}
+
+.swiper-pagination-product{
+  position: static;
+  min-height: 20px;
+}
+.swiper-overflow-wrapper{
+  .swiper-container{
+    overflow: visible;
+  }
+  .swiper-wrapper-wrapper{
+    overflow: visible;
+  }
+}
+
+
+//cls fix
+
+.swiper-cls-fix:not(.swiper-container-initialized) .swiper-wrapper {
+  grid-template-rows: 1fr;
+  grid-auto-rows: 0;
+  display: grid;
+  overflow: hidden;
+}
+
+@for $i from 1 through 12 {
+  .desktop-swiper-cls-fix-#{$i}:not(.swiper-container-initialized) .swiper-wrapper {
+    grid-template-columns: repeat($i, 1fr);
+  }
+}
+
+
+@include media-breakpoint-down(md) {
+  @for $i from 1 through 12 {
+    .tablet-swiper-cls-fix-#{$i}:not(.swiper-container-initialized) .swiper-wrapper {
+      grid-template-columns: repeat($i, 1fr);
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  @for $i from 1 through 12 {
+    .mobile-swiper-cls-fix-#{$i}:not(.swiper-container-initialized) .swiper-wrapper {
+      grid-template-columns: repeat($i, 1fr);
+    }
+  }
+}
+
+
+@for $i from 1 through 12 {
+  .swiper-cls-row-fix-#{$i}:not(.swiper-container-initialized) .swiper-wrapper {
+    grid-template-rows: repeat($i, 1fr);
+  }
+}
+
+
+
+

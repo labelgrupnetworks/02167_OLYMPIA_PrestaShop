@@ -1,0 +1,30 @@
+<?php
+
+global $_MODULE;
+$_MODULE = array();
+$_MODULE['<{iqitreviews}prestashop>iqitreviews_34e80a799d144cfe4af46815e103f017'] = 'Komentarze';
+$_MODULE['<{iqitreviews}prestashop>actions_7b0bf23ae4079e07a3a4cb4d07e2caef'] = 'Niepoprawny tytuł';
+$_MODULE['<{iqitreviews}prestashop>actions_ddbd56de5feb78ef1aaf60401f8c472b'] = 'Niepoprawny komentarz';
+$_MODULE['<{iqitreviews}prestashop>actions_1b1030b6294e9096a7d7c40d83d61872'] = 'Imię jest niepoprawne';
+$_MODULE['<{iqitreviews}prestashop>actions_01d4e07cf2d4c9bd8a430ca055f41365'] = 'Musisz być zalogowany aby napisać komentarz';
+$_MODULE['<{iqitreviews}prestashop>actions_b49f8546e2139beb757bba0451f56944'] = 'Zła ocena';
+$_MODULE['<{iqitreviews}prestashop>actions_dfbe69c6d9568ecb0e65e7b32ed92a3a'] = 'Nie znalezionio produktu';
+$_MODULE['<{iqitreviews}prestashop>actions_85d63828e94dd72eba870d1eccffe9b7'] = 'Dodano recencje';
+$_MODULE['<{iqitreviews}prestashop>actions_8d0fbd51fabc4fb20a5f491d90c49a48'] = 'Proszę poczekaj 60 sekund';
+$_MODULE['<{iqitreviews}prestashop>actions_705bf53ca087d3ef5e22dd453635d7ab'] = 'Nastąpił błąd podczas dodawania recenzji';
+$_MODULE['<{iqitreviews}prestashop>product-reviews-footer_34e80a799d144cfe4af46815e103f017'] = 'Opine';
+$_MODULE['<{iqitreviews}prestashop>product-reviews_34e80a799d144cfe4af46815e103f017'] = 'Opinie';
+$_MODULE['<{iqitreviews}prestashop>product-reviews_050a493969d909496cace9cae0fb0ca7'] = 'Brak opini';
+$_MODULE['<{iqitreviews}prestashop>product-reviews_77929e05bb68ed77c1b8fc1062bd619a'] = 'Napisz opinie';
+$_MODULE['<{iqitreviews}prestashop>product-reviews_53e5aa2c97fef1555d2511de8218c544'] = 'Napisał';
+$_MODULE['<{iqitreviews}prestashop>product-reviews_ed2b5c0139cec8ad2873829dc1117d50'] = 'dnia';
+$_MODULE['<{iqitreviews}prestashop>product-reviews_c31732fda0c6f01c446db7163b214de4'] = 'Napisz opinie';
+$_MODULE['<{iqitreviews}prestashop>product-reviews_49ee3087348e8d44e1feda1917443987'] = 'Imie';
+$_MODULE['<{iqitreviews}prestashop>product-reviews_4c2a904bafba06591225113ad17b5cec'] = 'Jan Kowalski';
+$_MODULE['<{iqitreviews}prestashop>product-reviews_b78a3223503896721cca1303f776159b'] = 'Tytył';
+$_MODULE['<{iqitreviews}prestashop>product-reviews_11875f00c302c19e98e4a02594316b33'] = 'np. Bardzo dobry';
+$_MODULE['<{iqitreviews}prestashop>product-reviews_dda9c06f33071c9b6fc237ee164109d8'] = 'Ocena';
+$_MODULE['<{iqitreviews}prestashop>product-reviews_0be8406951cdfda82f00f79328cf4efc'] = 'Komentarz';
+$_MODULE['<{iqitreviews}prestashop>product-reviews_ac34abd5dad413e429f62e5b8fdf9ec7'] = 'Napisz swoją opinie';
+$_MODULE['<{iqitreviews}prestashop>product-reviews_4239fa113a2ad4aefe9ffdcdefc5d31d'] = 'Wyślij';
+$_MODULE['<{iqitreviews}prestashop>simple-product-rating_34e80a799d144cfe4af46815e103f017'] = 'Ocen';
