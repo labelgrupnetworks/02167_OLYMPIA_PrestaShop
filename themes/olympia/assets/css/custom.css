@@ -13,6 +13,39 @@
     padding-bottom: 0px !important;
 }
 
+
+/* HOME */
+.one_product_list h4.product-title, 
+.one_product_list h4.product-title a:link:not(.nav-link):not(.btn), 
+.one_product_list h4.product-title a:visited:not(.nav-link):not(.btn) {
+    font: normal normal 600 22px/20px Work Sans;
+    color: #2F3136;
+    padding-bottom: 20px;
+}
+
+.one_product_list .product-description.col p {
+    font-size: 15px;
+}
+
+.one_product_list .products .product-price {
+    font: normal normal 600 25px/29px Work Sans;
+}
+
+.one_product_list .product-miniature-small .product-description {
+    padding-right: 70px;
+}
+
+.one_product_list .product-link, 
+.one_product_list .product-link a:link:not(.nav-link):not(.btn), 
+.one_product_list .product-link a:visited:not(.nav-link):not(.btn) {
+    font: normal normal normal 20px/22px Work Sans;
+    padding-top: 30px;
+    color: #2F3136;
+}
+
+
+
+
 /* LISTADO DE PRODUCTOS */
 .header-banner {
     display: none;
@@ -53,31 +86,60 @@
     font-weight: 700;
 }
 
-/* HOME */
-.one_product_list h4.product-title, 
-.one_product_list h4.product-title a:link:not(.nav-link):not(.btn), 
-.one_product_list h4.product-title a:visited:not(.nav-link):not(.btn) {
-    font: normal normal 600 22px/20px Work Sans;
-    color: #2F3136;
-    padding-bottom: 20px;
-}
-
-.one_product_list .product-description.col p {
+.products-selection {
+    border-top: 1px solid #F2F5FC;
+    border-bottom: 1px solid #F2F5FC;
     font-size: 15px;
-}
-
-.one_product_list .products .product-price {
-    font: normal normal 600 25px/29px Work Sans;
-}
-
-.one_product_list .product-miniature-small .product-description {
-    padding-right: 70px;
-}
-
-.one_product_list .product-link, 
-.one_product_list .product-link a:link:not(.nav-link):not(.btn), 
-.one_product_list .product-link a:visited:not(.nav-link):not(.btn) {
-    font: normal normal normal 20px/22px Work Sans;
-    padding-top: 30px;
     color: #2F3136;
 }
+
+.products-selection .view-switcher {
+    display: none;
+}
+
+.products-selection .form-control {
+    background: #F8FAFD;
+    border: 1px solid #F8FAFD;
+}
+
+#search_center_filter_toggler {
+    background: #F8FAFD url(../img/filter.png) no-repeat left;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    color: #2F3136;
+
+}
+
+#facets_search_center {
+    display: block;
+    background: #ffffff;
+    font-size: 14px;
+    color: #324F57;
+}
+
+#facets_search_center h4 {
+    font-family: 'Georgia';
+    font-size: 20px !important;
+    color: #324F57 !important;
+    border-bottom: 1px solid red;
+}
+
+
+.fa-filter:before {
+    content: '' !important;
+}
+
+#wrapper .block-title {
+    border-bottom: 1px solid #F8FAFD;
+}
+
+.product-functional-buttons-bottom {
+    left: 85% !important;
+    bottom: 85% !important;
+    background: none !important;
+  }
+
+  .js-iqitcompare-add, .js-quick-view-iqit {
+    display: none !important;
+  }
+

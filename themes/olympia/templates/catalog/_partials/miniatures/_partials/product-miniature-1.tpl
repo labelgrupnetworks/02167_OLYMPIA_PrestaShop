@@ -35,14 +35,14 @@
 
     {block name='product_name'}
         <h2 class="h3 product-title">
-            <a href="{$product.url}">{$product.name|truncate:90:'...'}</a>
+            <a href="{$product.url}">{$product.name|truncate:40:'...'}</a>
         </h2>
     {/block}
 
 
     {block name='product_description_short'}
         <div class="product-description-short text-muted">
-            <a href="{$product.url}">{$product.description_short|strip_tags:'UTF-8'|truncate:360:'...' nofilter}</a>
+            <a href="{$product.url}">{$product.description_short|strip_tags:'UTF-8'|truncate:60:'...' nofilter}</a>
         </div>
     {/block}
 
