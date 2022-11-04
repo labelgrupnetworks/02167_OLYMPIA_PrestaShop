@@ -2,3 +2,82 @@
  * Custom code goes here.
  * A template should always ship with an empty custom.css
  */
+
+/* HEADER */
+.logo {
+    height: 40px;
+    width: auto;
+}
+
+#header {
+    padding-bottom: 0px !important;
+}
+
+/* LISTADO DE PRODUCTOS */
+.header-banner {
+    display: none;
+}
+
+#index .header-banner {
+    display: inherit !important;
+}
+
+#wrapper .breadcrumb {
+    background: #fcfcfc
+}
+
+#category #js-product-list-header {
+    display: none;
+}
+
+.products .product-flags {
+    display: none;
+}
+
+.products img {
+    width: 100%;
+}
+
+.products h2 a {
+    font-weight: 700 !important;
+    color: #2F3136 !important;
+}
+
+.products .product-description-short {
+    color: #2F3136;
+    font-size: 15px;
+}
+
+.products .product-price {
+    color: #2F3136;
+    font-weight: 700;
+}
+
+/* HOME */
+.one_product_list h4.product-title, 
+.one_product_list h4.product-title a:link:not(.nav-link):not(.btn), 
+.one_product_list h4.product-title a:visited:not(.nav-link):not(.btn) {
+    font: normal normal 600 22px/20px Work Sans;
+    color: #2F3136;
+    padding-bottom: 20px;
+}
+
+.one_product_list .product-description.col p {
+    font-size: 15px;
+}
+
+.one_product_list .products .product-price {
+    font: normal normal 600 25px/29px Work Sans;
+}
+
+.one_product_list .product-miniature-small .product-description {
+    padding-right: 70px;
+}
+
+.one_product_list .product-link, 
+.one_product_list .product-link a:link:not(.nav-link):not(.btn), 
+.one_product_list .product-link a:visited:not(.nav-link):not(.btn) {
+    font: normal normal normal 20px/22px Work Sans;
+    padding-top: 30px;
+    color: #2F3136;
+}
