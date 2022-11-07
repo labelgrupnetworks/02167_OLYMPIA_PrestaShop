@@ -43,7 +43,15 @@
     color: #2F3136;
 }
 
+.main-categories h3.elementor-icon-box-title{
+    margin-top: 15px;
+}
 
+.main-categories h3.elementor-icon-box-title a:link:not(.nav-link):not(.btn), 
+.main-categories h3.elementor-icon-box-title a:visited:not(.nav-link):not(.btn){
+    color: #324F57;
+    font: normal normal normal 14px/30px Work Sans;
+}
 
 
 /* LISTADO DE PRODUCTOS */

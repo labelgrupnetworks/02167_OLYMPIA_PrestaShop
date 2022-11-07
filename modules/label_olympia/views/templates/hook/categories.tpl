@@ -6,27 +6,22 @@
                     data-element_type="column">
                     <div class="elementor-column-wrap elementor-element-populated">
                         <div class="elementor-widget-wrap">
-                            <div 
-                                class="elementor-widget elementor-element elementor-element-c54elor 
-                                    elementor-widget-icon-box elementor-view-default elementor-position-top 
-                                    elementor-vertical-align-top animated fadeInLeft" 
-                                data-animation="fadeInLeft" data-element_type="icon-box">
+                            <div class="elementor-widget elementor-element elementor-element-c54elor elementor-widget-icon-box elementor-view-default elementor-position-top elementor-vertical-align-top" data-animation="fadeInLeft" data-element_type="icon-box">
                                 <div class="elementor-widget-container">
                                     <div class="elementor-icon-box-wrapper">
                                         <div class="elementor-icon-box-icon">
-                                            <span class="elementor-icon elementor-animation-">
-                                                <i class="fa fa-balance-scale"></i>
-                                            </span>
+                                            <img src="{$category.image_url}">
                                         </div>
                                         <div class="elementor-icon-box-content">
                                             <h3 class="elementor-icon-box-title">
-                                                <span>{$category.infos.name}</span>
+                                                <a href="{$category.url}">{$category.name}</a>
                                             </h3>
                                             <div class="elementor-icon-box-description"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>

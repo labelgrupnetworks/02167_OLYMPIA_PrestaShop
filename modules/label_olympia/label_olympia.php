@@ -98,11 +98,34 @@ class Label_olympia extends Module
             AND c.level_depth = 2 
         ';
         $limit = 'LIMIT 9';
-        $categories = Category::getCategories(Context::getContext()->language->id, true, true, $sqlFilter, '', $limit);
+        $categories = $this->getCategories(Context::getContext()->language->id, true, $sqlFilter, $limit);
         $this->smarty->assign([
-            'categories' => $categories[2]
+            'categories' => $categories
         ]);
   
         return $this->fetch('module:label_olympia/views/templates/hook/categories.tpl');
+    }
+
+    private function getCategories($idLang = false, $active = true, $sqlFilter = '', $limit = '')
+    {
+        $context = Context::getContext();
+        $result = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS('
+			SELECT c.id_category, cl.name, cl.link_rewrite
+			FROM `' . _DB_PREFIX_ . 'category` c
+			' . Shop::addSqlAssociation('category', 'c') . '
+			LEFT JOIN `' . _DB_PREFIX_ . 'category_lang` cl ON c.`id_category` = cl.`id_category`' . Shop::addSqlRestrictionOnLang('cl') . '
+			WHERE 1 ' . $sqlFilter . ' ' . ($idLang ? 'AND `id_lang` = ' . (int) $idLang : '') . '
+			' . ($active ? 'AND `active` = 1' : '') . '
+			ORDER BY c.`level_depth` ASC, category_shop.`position` ASC
+			' . ($limit != '' ? $limit : '')
+        );
+
+        foreach ($result as &$row) {
+            if(file_exists(_PS_CAT_IMG_DIR_ . (int)$row['id_category'].'_thumb.jpg')){
+                $row['image_url'] = '/img/c/' . (int)$row['id_category'].'_thumb.jpg';
+            }
+            $row['url'] = $context->link->getCategoryLink((int) $row['id_category']);
+        }
+        return $result;
     }
 }
