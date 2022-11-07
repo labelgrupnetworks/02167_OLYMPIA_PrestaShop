@@ -53,6 +53,26 @@
     font: normal normal normal 14px/30px Work Sans;
 }
 
+.full-image-product .products-grid .product-miniature-default {
+    min-height: 423px;
+}
+
+.full-image-product .thumbnail-container.reviews-loading {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.full-image-product .product-description {
+    position: absolute;
+    bottom: 85px;
+}
+
+.full-image-product .products .product-flags, 
+.full-image-product .product-miniature-grid .product-functional-buttons-bottom, 
+.full-image-product .product-miniature-grid .product-availability {
+    display: none !important;
+}
 
 /* LISTADO DE PRODUCTOS */
 .header-banner {
@@ -150,4 +170,72 @@
   .js-iqitcompare-add, .js-quick-view-iqit {
     display: none !important;
   }
+
+  /* FICHA DEL PRODUCTO */
+  #iqitproductsnav {
+    display: none;
+  }
+
+  .col-product-info h1 {
+    font-size: 38px !important;
+    font-family: 'Georgia';
+    color: #324F57 !important;
+  }
+
+  .product_header_container {
+    padding-bottom:  0px !important;
+    border-bottom: none !important;
+    margin-bottom: 0px !important;
+  }
+
+  .product-information p {
+    font-size: 15px;
+    color: #2F3136;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #F7F9FD;
+  }
+
+  #product .product-reference {
+    display: none;
+  }
+
+  .product_p_price_container {
+    padding-top: 0px !important;
+    border-top: none !important;
+  }
+
+#col-product-info .product-price {
+    font-size: 28px;
+    color: #117393 !important;
+}
+
+#col-product-info .tax-shipping-delivery-label {
+    display: none;
+}
+
+#col-product-info .btn-primary {
+    background: #324F57;
+}
+
+.product-additional-info {
+    border-top: none;
+}
+
+.product-sections {
+    background: #F7F9FD;
+    padding: 15px;
+}
+
+.product-sections p {
+    font-size: 15px;
+    color: #2F3136;
+}
+
+.product-sections .section-title {
+    border-bottom: none !important;
+    padding-bottom: 0px !important;
+    font-size: 30px !important;
+    font-family: 'Georgia';
+    color: #2F3136 !important;
+}
 
