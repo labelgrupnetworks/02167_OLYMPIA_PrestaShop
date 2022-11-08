@@ -74,6 +74,18 @@
     display: none !important;
 }
 
+#index .header-nav {
+    background: none !important;
+}
+
+#index .header-nav * {
+    color: #ffffff !important;
+}
+
+#index #iqitmegamenu-horizontal a {
+    color: #ffffff !important;
+}
+
 /* LISTADO DE PRODUCTOS */
 .header-banner {
     display: none;
