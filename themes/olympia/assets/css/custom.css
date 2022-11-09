@@ -35,26 +35,15 @@
     display: none !important;
 }
 
-#index .block-iqitlinksmanager li:first-child {
-    padding: 0px 0px 0px 22px;
-    background: url(../img/tel_blanco.svg) no-repeat left;
-}
-
-#index .block-iqitlinksmanager li:last-child {
-    padding: 0px 0px 0px 22px;
-    margin-left: 15px;
-    background: url(../img/mail_blanco.svg) no-repeat left;
-}
-
 #index .header-nav .block-iqitlinksmanager li:first-child {
     padding: 0px 0px 0px 22px;
-    background: url(../img/tel_blanco.svg) no-repeat left !important;
+    background: url(../img/tel_blanco.svg) no-repeat left;
 }
 
 #index .header-nav .block-iqitlinksmanager li:last-child {
     padding: 0px 0px 0px 22px;
     margin-left: 15px;
-    background: url(../img/mail_blanco.svg) no-repeat left !important;
+    background: url(../img/mail_blanco.svg) no-repeat left;
 }
 
 .header-nav .block-iqitlinksmanager li:first-child {
@@ -124,6 +113,78 @@
 #index #iqitmegamenu-horizontal li > a:focus:before {
   visibility: visible;
   transform: scaleX(1);
+}
+
+/* FOOTER */
+#footer .block-title {
+    border-bottom: none;
+    font-family: 'Georgia';
+    font-size: 18px;
+    color: #324F57;
+}
+
+.block-links ul>li a:before {
+    display: none !important;
+}
+
+.block-links ul>li a {
+    margin-left: -10px;
+}
+
+.social-links li {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #2F3136;
+    text-align: center;
+    border-radius: 25px;
+    padding-top: 4px;
+}
+
+.footer_ {
+    margin-top: 50px !important;
+    padding: 40px 0px 40px 0px;
+    background: #2F3136;
+    color: #ffffff;
+}
+
+.footer_ a {
+    color: #E3E8F3 !important;
+    font-size: 16px;
+    font-weight: 300 !important;
+}
+
+.footer_ .block-title {
+    display: none;
+}
+
+.block-iqitlinksmanager-6 li {
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.block-iqitlinksmanager-6 li:last-child {
+    margin-top: 30px !important;
+    background: url(../img/carrito_blanco.svg) no-repeat left;
+    padding-left: 27px;
+}
+
+.block-iqitlinksmanager-7 li {
+    text-align: center;
+}
+
+.block-iqitlinksmanager-8 li {
+    text-align: right;
+    text-transform: uppercase;
+}
+
+#footer-copyrights {
+    margin-top: -50px !important;
+}
+
+#footer-copyrights p {
+    text-align: center !important;
+    color: #ffffff !important;
+    font-size: 12px;
 }
 
 
@@ -354,3 +415,18 @@
     color: #2F3136 !important;
 }
 
+
+/* SOBRE NOSOTROS (Y OTROS CMS) */
+#cms .page-header {
+    display: none;
+}
+
+._cabecera_nosotros img {
+    width: 100%;
+}
+
+._slider_restaurante .swiper-button {
+    border-radius: 50px !important;
+    width: 50px !important;
+    height: 50px !important;
+}
