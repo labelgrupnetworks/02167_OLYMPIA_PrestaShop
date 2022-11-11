@@ -78,7 +78,7 @@ class LRPFrontProductController extends LRPControllerCore
         }
 
         $product_info = LRPProductHelper::getProductInfo(Tools::getValue('id_product'), $group);
-        $id_product_attribute = Product::getIdProductAttributesByIdAttributes((int)Tools::getValue('id_product'), $group);
+        $id_product_attribute = $product_info['id_product_attribute'];
         if (LRPProductHelper::isProductOnDiscount(Tools::getValue('id_product'), $id_product_attribute)) {
             return false;
         }
