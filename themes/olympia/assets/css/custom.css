@@ -422,6 +422,7 @@
     min-width: inherit;
     transform-origin: unset;
     transition: inherit;
+    display: none;
 }
 
 /* SOBRE NOSOTROS (Y OTROS CMS) */
