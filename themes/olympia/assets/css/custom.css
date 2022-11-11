@@ -415,6 +415,14 @@
     color: #2F3136 !important;
 }
 
+.datetimepicker.datetimepicker-dropdown-bottom-right {
+    opacity: 1;
+    visibility: visible;
+    transform: inherit;
+    min-width: inherit;
+    transform-origin: unset;
+    transition: inherit;
+}
 
 /* SOBRE NOSOTROS (Y OTROS CMS) */
 #cms .page-header {
