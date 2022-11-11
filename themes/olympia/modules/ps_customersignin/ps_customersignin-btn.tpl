@@ -16,36 +16,27 @@
                         <i class="fa fa-user fa-fw" aria-hidden="true"></i>
                         {l s='Information' d='Shop.Theme.Customeraccount'}
                     </a>
-                    {if $customer.addresses|count}
-                        <a class="dropdown-item" href="{$urls.pages.addresses}">
-                            <i class="fa fa-map-marker fa-fw" aria-hidden="true"></i>
-                            {l s='Addresses' d='Shop.Theme.Customeraccount'}
-                        </a>
-                    {else}
-                        <a class="dropdown-item" href="{$urls.pages.address}">
-                            <i class="fa fa-map-marker fa-fw" aria-hidden="true"></i>
-                            {l s='Add first address' d='Shop.Theme.Customeraccount'}
-                        </a>
-                    {/if}
+                    
                     {if !$configuration.is_catalog}
                         <a class="dropdown-item" href="{$urls.pages.history}">
                             <i class="fa fa-history fa-fw" aria-hidden="true"></i>
                             {l s='Order history and details' d='Shop.Theme.Customeraccount'}
                         </a>
                     {/if}
+
+
                     {if !$configuration.is_catalog}
-                        <a class="dropdown-item" href="{$urls.pages.order_slip}">
-                            <i class="fa fa-file-o fa-fw" aria-hidden="true"></i>
-                            {l s='Credit slips' d='Shop.Theme.Customeraccount'}
+                        <a class="dropdown-item" href="{$urls.base_url}module/iqitwishlist/view">
+                            {l s='Mis favoritos' d='Shop.Theme.Customeraccount'}
                         </a>
                     {/if}
 
-                    {if $configuration.voucher_enabled && !$configuration.is_catalog}
-                        <a class="dropdown-item" href="{$urls.pages.discount}">
-                            <i class="fa fa-tags fa-fw" aria-hidden="true"></i>
-                            {l s='Vouchers' d='Shop.Theme.Customeraccount'}
+                    {if !$configuration.is_catalog}
+                        <a class="dropdown-item" href="{$urls.base_url}module/loyaltyrewardpoints/customeraccount">
+                            {l s='Mis puntos' d='Shop.Theme.Customeraccount'}
                         </a>
                     {/if}
+                    
 
                     {if $configuration.return_enabled && !$configuration.is_catalog}
                         <a class="dropdown-item" href="{$urls.pages.order_follow}">
