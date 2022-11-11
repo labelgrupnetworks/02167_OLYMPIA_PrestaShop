@@ -7,7 +7,7 @@ class CartRule extends CartRuleCore
     * date: 2022-11-08 16:03:44
     * version: 2.0.1
     */
-    public static function autoAddToCart(Context $context = null)
+    public static function autoAddToCart(Context $context = null,  bool $useOrderPrices = false)
     {
         
         parent::autoAddToCart($context);

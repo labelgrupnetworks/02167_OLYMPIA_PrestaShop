@@ -1,4 +1,6 @@
 <?php
+
+use PrestaShop\PrestaShop\Adapter\ServiceLocator;
 class Cart extends CartCore
 {
     
@@ -73,15 +75,6 @@ class Cart extends CartCore
         }
         return parent::getDeliveryOptionList($default_country, $flush);
     }
-   
-    
-    
-   
-    
-    
-   
-    
-    
    
     /*
     * module: kbbookingcalendar
@@ -470,11 +463,11 @@ class Cart extends CartCore
         $use_cache = true,
         bool $keepOrderPrices = false
     ) {
-            $price_calculator = ServiceLocator::get('\\PrestaShop\\PrestaShop\\Adapter\\Product\\PriceCalculator');
-            $ps_use_ecotax = $this->configuration->get('PS_USE_ECOTAX');
-            $ps_round_type = $this->configuration->get('PS_ROUND_TYPE');
-            $ps_ecotax_tax_rules_group_id = $this->configuration->get('PS_ECOTAX_TAX_RULES_GROUP_ID');
-            $compute_precision = $this->configuration->get('_PS_PRICE_COMPUTE_PRECISION_');
+        $price_calculator = ServiceLocator::get('\\PrestaShop\\PrestaShop\\Adapter\\Product\\PriceCalculator');
+        $ps_use_ecotax = $this->configuration->get('PS_USE_ECOTAX');
+        $ps_round_type = $this->configuration->get('PS_ROUND_TYPE');
+        $ps_ecotax_tax_rules_group_id = $this->configuration->get('PS_ECOTAX_TAX_RULES_GROUP_ID');
+        $compute_precision = $this->configuration->get('_PS_PRICE_COMPUTE_PRECISION_');
         if (!$this->id) {
             return 0;
         }
