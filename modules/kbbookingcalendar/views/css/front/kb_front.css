@@ -1,0 +1,293 @@
+.kb-product-facilities-block {
+    margin-top: 4%;
+    box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2);
+    margin-top: 2rem;
+    background: #fff;
+    padding: 1.25rem 1.875rem;
+}
+.kb-product-facilities-block h5 {
+    text-align: center;
+}
+
+.kb-center {
+    /*margin-left: -40px;*/
+    /*margin-right: -40px;*/
+}
+.kb-center .slick-current .kb-slick-block {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    -webkit-transform: scale(1);
+    color: #e67e22;
+    opacity: 1;
+    transform: scale(1);
+}
+.slick-prev:before, .slick-next:before {
+    color: #413d3d !important;
+}
+/*   .kb-center .slick-center .kb-slick-block {
+  -moz-transform: scale(1.08);
+  -ms-transform: scale(1.08);
+  -o-transform: scale(1.08);
+  -webkit-transform: scale(1.08);
+  color: #e67e22;
+  opacity: 1;
+  transform: scale(1.08);
+}*/
+.kb_slider .kb-slick-block,.kb_room_slider .kb-slick-block {
+    background: #f1f1f1;
+    color: #3498db;
+    margin: 10px;
+    padding: 2%;
+    position: relative;
+    text-align: center;
+}
+.kb-slick-block  i, .kb-slick-block img {
+    margin: 5px;
+}
+.kb-center .kb-slick-block {
+    opacity: 0.8;
+    transition: all 300ms ease;
+}
+.kb-center .kb-slick-block {
+    -moz-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    -o-transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+    opacity: 0.8;
+    transform: scale(0.95);
+    transition: all 300ms ease;
+}
+.kb-slick-block label {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #2fb5d2;
+    font-weight: 600;
+}
+.kb-booking-product-block {
+    box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2);
+    margin-top: 2rem;
+    background: #fff;
+    padding: 1.25rem 1.875rem;
+}
+.kb-booking-product-block h5 {
+    text-align: center;
+}
+.kb-booking-product-price-block {
+    border-bottom: 1px solid #e1e1e1;
+    margin-bottom: 10px;
+    color: #575757;
+    display: table;
+    margin-bottom: 15px;
+    width: 100%;
+}
+.kb-booking-product-price-block .kb-booking-product-price {
+    color: #2fb5d2;
+    font-size: 21px;
+    line-height: 36px;
+    font-weight: 700;
+}
+.booking-product-basic-info {
+
+}
+.kb-booking-map-block {
+    height: 250px;
+    width: 90%;
+    float: left;
+    /*text-align: center;*/
+    margin-bottom: 25px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.kb-booking-map-block #map {
+    height: 100%;
+}
+
+#kbrenderHotelRoomBlockModel .modal-content {
+    border-radius: 0;
+}
+#kbrenderHotelRoomBlockModel  .modal-header {
+    color: #fff;
+    padding: 15px;
+    border-bottom: none; 
+    text-align: center;
+    background: #ff7a7a;
+}
+#kbrenderHotelRoomBlockModel .close {
+    color:#fff;
+    opacity: 1;
+}
+
+.kb_hotel_room_qty {
+    width: 64px;
+    text-align: center;
+}
+
+@media (min-width: 576px) {
+
+    #kbrenderHotelRoomBlockModel .modal-dialog {
+        max-width: 700px;
+        margin: 30px auto;
+    }
+}
+
+
+/*.velsof_star_ratings div.stars {
+     width: 270px; 
+    display: block;
+    float: left;
+     clear: both; 
+}
+.velsof_star_ratings #velsof_loader{
+    width:30px;
+    height: 30px;
+    display: none;
+}
+.velsof_star_ratings input.star { display: none; }
+.velsof_star_ratings .kbrc_overlay {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.6);
+    filter:alpha(opacity=50);
+    -moz-opacity:0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+    z-index: 1000;
+}
+.velsof_star_ratings label.star {
+    float: right;
+    padding: 6px;
+    font-size: 24px;
+    color: #444;
+    transition: all .2s;
+}
+
+.velsof_star_ratings input.star:checked ~ label.star:before {
+    content: '\f005';
+    color: #FD4;
+    transition: all .25s;
+}
+
+.velsof_star_ratings .kbrc_inline{
+    display: grid;
+}
+
+.velsof_star_ratings input.star-5:checked ~ label.star:before {
+    color: #FE7;
+    text-shadow: 0 0 20px #952;
+}
+
+.velsof_star_ratings input.star-1:checked ~ label.star:before { color: #F62; }
+.velsof_star_ratings label.star:before {
+    content: '\f005';
+    font-family: FontAwesome;
+}
+.velsof_star_ratings .stars .selected{color:gold;}
+.velsof_star_ratings .stars > label:hover:before {
+   content: "\2605";
+   position: absolute;
+}
+.velsof_star_ratings .stars > input:checked ~ label, 
+.velsof_star_ratings .stars:not(:checked) > label:hover,  
+.velsof_star_ratings .stars:not(:checked) > label:hover ~ label { color: #FFD700;  }
+
+.velsof_star_ratings .stars > span input:checked + label:hover, 
+.velsof_star_ratings .stars > span input:checked ~ label:hover,
+.velsof_star_ratings .stars > label:hover ~ input:checked ~ label, 
+.velsof_star_ratings .stars > input:checked ~ label:hover ~ label { color: #FFED85;  }
+.velsof_star_ratings .stars > label { 
+    color: #ddd; 
+}
+.velsof_star_ratings .stars .dark {
+    color: gold;
+}*/
+
+.velsof_star_ratings .kbrating_label {
+    float: left;
+    line-height: 32px;
+    padding-right: 10px;
+    font-weight: 600;
+}
+
+.hotel-room-addition-info-block {
+    padding: 1.25rem 1.5rem;
+}
+
+.hotel-room-addition-info-block .h6 {
+    border-bottom: 1px dashed #d3d3d3;
+    padding-bottom: 10px;
+}
+
+.hotel-room-addition-info-block > p > span {
+    color: #000;
+}
+.kb-room-facilities-block {
+    padding: 1.25rem 1.5rem;
+}
+.kb-room-facilities-block .h6 {
+    border-bottom: 1px dashed #d3d3d3;
+    padding-bottom: 10px;
+}
+
+.kb-product-price-rule-block {
+    clear: both;
+    margin-bottom: 4%;
+    margin-top: 4%;
+}
+.kb-product-price-rule-block h6 {
+    border-bottom: 1px solid #bdbdbd;
+    padding: 2%;
+}
+.kb-product-price-rule-block p {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+.kb-product-price-rule-block span.kb-rule-label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #000;
+}
+.star_content {
+    margin-top: 1%;
+    margin-bottom: 4%;
+}
+.kb-star {
+    position: relative;
+    top: 5px;
+    float: left;
+    width: 24px;
+    overflow: hidden;
+    /*cursor: pointer;*/
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.kb-star {
+    display: block;
+}
+.kb-star a {
+    display: block;
+    position: absolute;
+    text-indent: -5000px; }
+
+div.kb-star:after {
+    content: "\e83a";
+    font-family: "Material Icons";
+    display: inline-block;
+    color: #777676; }
+
+div.kb-star.star_on {
+    display: block; }
+div.kb-star.star_on:after {
+    content: "\e838";
+    font-family: "Material Icons";
+    display: inline-block;
+    color: #ef8743; }
+
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: table;
+}
