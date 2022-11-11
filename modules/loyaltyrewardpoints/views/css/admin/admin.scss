@@ -1,0 +1,209 @@
+#lrp-admin-order-summary-panel {
+	dl {
+		display: flex;
+		flex-direction: row;
+	}
+
+	dl.disabled {
+		opacity: 0.5;
+	}
+
+	.lrp-box {
+		background-color:#fff;
+		border:4px solid #f3f3f3;
+		border-right: 2px solid #f3f3f3 !important ;
+		border-left: 2px solid #f3f3f3 !important;
+		padding: 20px;
+	}
+
+	.lrp-boxes {
+		display: flex;
+		flex-direction: row;
+
+		.lrp-box {
+			min-width: 200px;
+		}
+
+		.badge {
+			width: 100%;
+			font-size: 14px;
+		}
+	}
+}
+
+
+.lrp-pagination {
+	a.page.selected {
+		font-weight: bold;
+		text-underline: none;
+		color:#888;
+	}
+}
+
+#lrp-groups-list table tr.group:hover {
+	background-color:#f4f4f4;
+	cursor: pointer;
+}
+
+#lrp-groups-tab {
+	.form-wrapper {
+		.disabled {
+			* {
+				opacity: 0.6;
+				pointer-events: none;
+			}
+		}
+	}
+}
+
+#lrp-insights-tab {
+
+	#date-filter {
+
+		.date-filter-info {
+			display: block;
+			margin-bottom: 10px;
+			font-size: 14px;
+		}
+
+		.date-filter-row {
+			display: inline-grid;
+			grid-template-columns: auto auto auto auto;
+			column-gap: 10px;
+
+			div {
+				display: flex;
+				align-items: center;
+			}
+		}
+	}
+
+	h3 {
+		padding: 0 !important;
+		margin:20px 0 !important;
+		font-size: 26px !important;
+		border: none;
+	}
+
+	.insights-row {
+		display: grid;
+		grid-template-columns: 24% 24% 24% 24%;
+		column-gap: 10px;
+	}
+
+	.insight-summary-panel {
+		box-sizing: border-box;
+		border-radius: 4px;
+		color:white;
+		padding: 20px;
+		font-size:16px;
+		position: relative;
+
+		h4 {
+			font-size:26px;
+		}
+
+		span.stat {
+			display: block;
+			margin-top: 20px;
+			font-size: 26px;
+		}
+
+		i {
+			position: absolute;
+			right:10px;
+			top: 10px;
+			background-color:white;
+			border-radius: 50%;
+			height: 40px;
+			width: 40px;
+			display: block;
+			text-align: center;
+			line-height: 40px;
+		}
+
+	}
+
+	#referral_clicks_count {
+		background-color: #d50dc0;
+		i {
+			color:#d50dc0;
+		}
+	}
+
+	#referral_orders_count {
+		background-color: #0d96d5;
+		i {
+			color: #0d96d5;
+		}
+	}
+
+	#referral_new_customers_count {
+		background-color: #d50dc0;
+		i {
+			color: #d50dc0;
+		}
+	}
+
+	#referral_redeemed_total {
+		background-color: #0d96d5;
+		i {
+			color: #0d96d5;
+		}
+	}
+
+	#total_orders_redeemed {
+		background-color:#0d96d5;
+		i {
+			color:#0d96d5;
+		}
+	}
+
+	#total_points_redeemed {
+		background-color: #d50dc0;
+		i {
+			color:#d50dc0;
+		}
+	}
+
+	#total_unique_customer_redeemers {
+		background-color: #0d96d5;
+
+		i {
+			color: #0d96d5;
+		}
+	}
+
+	#total_points_value_redeemed {
+		background-color: #d50dc0;
+
+		i {
+			color: #d50dc0;
+		}
+	}
+
+	.tabs {
+		margin-top: 40px;
+		.tab {
+			display: inline-block;
+			background-color: white;
+			border: 2px solid #777;
+			border-bottom: none;
+			font-size: 14px;
+			padding: 10px 20px;
+			cursor: pointer;
+			position: relative;
+			top: 2px;
+			z-index:999;
+		}
+
+		.tab.active {
+			font-weight: bold;
+		}
+
+		.tab-content {
+			border:2px solid #777;
+			padding: 20px;
+		}
+	}
+}

@@ -1,0 +1,57 @@
+#lrp-points input[name='points'] {
+    padding: 10px;
+    border:1px solid #ececec;
+    color:#777;
+    text-align: center;
+    width: 80px;
+    height: 40px;
+    float: left;
+}
+
+#lrp-redeem-form {
+    margin-top: 20px;
+}
+
+#lrp-points span.points-label {
+    background-color:#efefef;
+    display: inline-block;
+    height: 40px;
+    float: left;
+    line-height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 10px;
+}
+
+/* Customer Account */
+#lrp-customer-account .points-card {
+    height:120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 700px) {
+    #lrp-customer-account .points-card.details {
+        display: block;
+        height: auto;
+        padding: 15px;
+    }
+}
+
+/* Product Page */
+#lrp-product-widget {
+    position: relative;
+}
+
+#lrp-product-widget .material-icons {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size:60px !important;
+    opacity:0.3;
+}
+
+#cart-points-summary .card {
+    display: block;
+}
