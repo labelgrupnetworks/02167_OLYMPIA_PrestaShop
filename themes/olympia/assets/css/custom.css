@@ -430,3 +430,240 @@
     width: 50px !important;
     height: 50px !important;
 }
+
+/* CONTACTO */
+.submit_btn_center {
+    color: #ffffff !important;
+    background: #117393 !important;
+}
+
+.submit_btn_center * {
+    color: #ffffff !important;
+}
+
+#html_92909 {
+    font-size: 12px;
+    margin-top: 15px !important;
+}
+
+.checkbox_box .col-md-4 {
+    display: none !important;
+}
+
+.checkbox_box .col-md-8 {
+    -ms-flex: 0 0 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+}
+
+.cms-id-6 .form-control {
+    background: #F7F9FD !important;
+    border: 1px solid #F7F9FD !important;
+}
+
+.cms-id-6 .btn-primary {
+    background: #324F57 !important;
+    text-transform: capitalize !important;
+}
+
+/* REGISTRO / LOGIN */
+#authentication .page-title {
+    border-bottom: none !important;
+    font-size: 38px;
+    color: #2F3136;
+    font-family: 'Georgia';
+    padding-bottom: 0px !important;
+}
+
+#authentication .form-control {
+    background: #F7F9FD !important;
+    border: 1px solid #F7F9FD !important;
+}
+
+
+/* OLVIDO SU CONTRASEÑA */
+#password .page-title {
+    border-bottom: none !important;
+    font-size: 38px;
+    color: #2F3136;
+    font-family: 'Georgia';
+    padding-bottom: 0px !important;
+}
+
+#password .form-control {
+    background: #F7F9FD !important;
+    border: 1px solid #F7F9FD !important;
+}
+
+/* ZONA DE USUARIO */
+.dropdown-menu i {
+    display: none;
+}
+
+.my-account-side-links i {
+    display: none;
+}
+
+#identity .page-title {
+    border-bottom: none !important;
+    font-size: 38px;
+    color: #2F3136;
+    font-family: 'Georgia';
+    padding-bottom: 0px !important;
+}
+
+#identity .form-control {
+    background: #F7F9FD !important;
+    border: 1px solid #F7F9FD !important;
+}
+
+.my-account-page-content h2 {
+    font-size: 22px;
+    padding-botttom: 50px !important;
+}
+
+.my-account-side-links #address-link {
+    display: none;
+}
+
+.my-account-side-links #order-slips-link {
+    display: none;
+}
+
+/* CARRITO */
+#cart .page-title {
+    border-bottom: none !important;
+    font-size: 38px;
+    color: #2F3136;
+    font-family: 'Georgia';
+    padding-bottom: 0px !important;
+}
+
+#cart .cart-items {
+    color: #2F3136;
+}
+
+#cart .cart-items .product-price {
+    color: #2F3136 !important;
+}
+
+.cart-detailed-subtotals #cart-subtotal-shipping {
+    display: none;
+}
+
+#cart .bootstrap-touchspin .form-control, #cart .bootstrap-touchspin .btn {
+    background: #F8F8F8 !important;
+}
+
+#cart .cart-total {
+    font-size: 22px;
+    color: #2F3136;
+}
+
+.cart-voucher-area {
+    background: #F2F5FC !important;
+}
+
+.cart-voucher-area .btn-secondary {
+    background: #0F261F !important;
+    color: #ffffff !important;
+}
+
+#cart .cart-grid-body .btn-secondary {
+    background: none !important;
+    color: #2F3136 !important;
+}
+
+#cart .cart-grid-body .btn-secondary i {
+    color: #117393 !important;
+}
+
+/* CHECKOUT */
+#checkout #div_onepagecheckoutps_login {
+    display: none;
+}
+
+#checkout h1 {
+    font-family: 'Georgia';
+    font-size: 38px;
+    color: #2F3136;
+    border-bottom: 1px solid #117393;
+    margin-bottom: 15px !important;
+    width: auto;
+    padding-bottom: 10px;
+}
+
+#checkout #div_onepagecheckoutps_info p {
+    font-size: 17px;
+    font-weight: 700;
+    color: #2F3136;
+}
+
+#onepagecheckoutps_step_one h5 {
+    border-top: 1px solid #D3D3D3;
+    border-bottom: 1px solid #D3D3D3;
+    color: #2F3136;
+    font-size: 15px;
+    padding: 15px 0px 15px 0px !important;
+}
+
+#onepagecheckoutps_step_three_container h5 {
+    border-top: 1px solid #D3D3D3;
+    border-bottom: 1px solid #D3D3D3;
+    color: #2F3136;
+    font-size: 15px;
+    padding: 15px 0px 15px 0px !important;
+}
+
+
+#form_customer label {
+    font-size: 15px !important;
+    color: #2F3136 !important;
+    margin-bottom: 7px !important;
+    margin-top: 20px !important;
+}
+
+#form_customer .form-control {
+    background: #F7F9FD !important;
+    border: 1px solid #F7F9FD !important;
+    font-size: 15px !important;
+    border-radius: 0px !important;
+}
+
+#panel_addresses_customer, #form_customer .fields_required {
+    display: none !important;
+}
+
+#onepagecheckoutps_step_one_container .btn {
+    font-size: 15px;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    margin-top: 20px !important;
+}
+
+#onepagecheckoutps_step_one_container .btn i {
+    display: none;
+}
+
+#checkout .payment-option {
+    background: #F2F5FC;
+    border: 1px solid #DDE3F1;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#onepagecheckoutps_step_review_container {
+    margin-top: 30px !important;
+}
+
+#onepagecheckoutps_step_review_container h5 {
+    border-top: 1px solid #D3D3D3;
+    border-bottom: 1px solid #D3D3D3;
+    color: #2F3136;
+    font-size: 15px;
+    padding: 15px 0px 25px 0px !important;
+    height: 60px !important;
+    text-transform: capitalize !important;
+}
+
+
