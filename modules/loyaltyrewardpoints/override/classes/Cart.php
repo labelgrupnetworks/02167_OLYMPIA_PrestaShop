@@ -19,7 +19,7 @@ class Cart extends CartCore
      * @param int $id_cart_rule
      * @return bool
      */
-    public function removeCartRule($id_cart_rule)
+    public function removeCartRule($id_cart_rule, bool $useOrderPrices = false)
     {
         include_once(_PS_MODULE_DIR_ . '/loyaltyrewardpoints/lib/bootstrap.php');
         LRPDiscountHelper::setPointsRedeem(0);
