@@ -1,0 +1,11 @@
+.fancybox_gcustom_style .switch, #gformbuilderpro_form .switch, .admingformmanager .switch, .admingformconfig .switch{
+    background-color: unset!important;
+}
+.panel.col-lg-12 .panel-heading {
+    padding: 10px!important;
+}
+@media (min-width: 1200px){
+    .bootstrap .control-label.col-lg-4 {
+        width: 25%!important;
+    }
+}

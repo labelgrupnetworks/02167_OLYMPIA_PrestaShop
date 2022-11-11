@@ -1,0 +1,10 @@
+span.nbr_unread {
+    background: #6161C7;
+    min-width: 20px;
+    height: 20px;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    padding: 0px 5px !important;
+    border-radius: 50%;
+}

@@ -1,0 +1,45 @@
+v 2.0.1-------------------------01/12/2021
+[New Option] Condition field
+[New Option] Wholesale field
+[New Default Form] Wholesale Order Form
+Fix css bug
+
+V 1.3.5-------------------------12/04/2021
+Fix tiny bug
+v 1.3.4-------------------------23/07/2020
+[New Option] Dynamic Value in input field
+[New Option] Shortcode in html field
+[Fix] Fix bug install in prestashop 1.5
+v1.3.2 - v 1.3.3-------------------------01/06/2020
+[New Function] Mailchimp, Klaviyo,Zapier integration
+[New field] Order reference
+[New Option] Redirect after submit by language
+[Improve] Adjust "email from" address to avoid spam
+v1.3.1-------------------------30/09/2019
+Fix tiny bug
+v1.3.0-------------------------27/06/2019
+[New] New UI, UX design
+[New] Dashboard, Analytics page
+[New] Email template
+[New function] Remove [Shop_Name] from email subject in prestashop 1.7
+v1.2.2-------------------------10/04/2019
+[New] Sending email conditions
+[New] Option "Starred Message"
+Reset form after submit successful
+v1.2.1-------------------------25/03/2019
+Fix tiny bug
+v1.2.0-------------------------19/03/2019
+[New Function] Import - Export forms
+[New Function] Popup form
+[New Function] Reply Email
+[New Function] Quickview Received Data
+v1.1.3-------------------------04/03/2019
+[New] Duplicate function
+[New] Support reCAPTCHA V3
+[New] New field type (Privacy policy checkbox)
+v1.1.2-------------------------18/10/2018
+Fix bug select field not save in backend PS 1.7.4 / PHP 7.2
+v1.1.1-------------------------28/07/2018
+Fix error on PS 1.7.4
+v1.1.0-------------------------20/06/2018
+- Updated for GDPR
