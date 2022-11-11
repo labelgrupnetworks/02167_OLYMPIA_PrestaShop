@@ -1,0 +1,146 @@
+/**
+ * We offer the best and most useful modules PrestaShop and modifications for your online store.
+ *
+ * We are experts and professionals in PrestaShop
+ *
+ * NOTICE OF LICENSE
+ *
+ * This file is not open source! Each license that you purchased is only available for 1 wesite only.
+ * If you want to use this file on more websites (or projects), you need to purchase additional licenses.
+ * You are not allowed to redistribute, resell, lease, license, sub-license or offer our resources to any third party.
+ *
+ * @author    PresTeamShop SAS (Registered Trademark) <info@presteamshop.com>
+ * @copyright 2011-2022 PresTeamShop SAS, All rights reserved.
+ * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License version 3.0
+ *
+ * @category  PrestaShop
+ * @category  Module
+ */
+
+#ui-datepicker-div table td,
+#ui-datepicker-div table th {
+    padding: 0;
+}
+.theiaStickySidebar{
+    position: initial !important;
+}
+div#onepagecheckoutps .modal-header .close {
+    color: inherit;
+    font-size: initial;
+    position: initial;
+}
+div#onepagecheckoutps #opc_modal {
+    padding-top: 0px !important;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+div#onepagecheckoutps #opc_modal .modal-dialog {
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    box-shadow: 0px 3px 35px 0px rgba(0,0,0,.2);
+}
+div#onepagecheckoutps .modal-body {
+    padding: 15px;
+}
+div#onepagecheckoutps .modal-header .panel-title{
+    width: 100%;
+    font-size: 18px;
+}
+div#onepagecheckoutps .modal-content {
+    padding: 0;
+    border: 1px solid #d3d3d3;
+    margin: 0;
+}
+.st-pusher {
+    position: initial !important;
+}
+div#onepagecheckoutps div#onepagecheckoutps_step_review .bootstrap-touchspin .input-group-btn-vertical .btn-touchspin::before {
+	content: ''
+}
+div#onepagecheckoutps div#onepagecheckoutps_step_review #block-reassurance li + li {
+	margin-top: 0;
+	padding-top: 0;
+}
+.breadcrumb.dor-breadcrumb {
+    display: none !important;
+}
+body#checkout main{
+    transform: initial;
+    -webkit-transform:initial;
+    -moz-transform:initial;
+    -ms-transform:initial;
+    -o-transform:initial;
+}
+div#onepagecheckoutps #onepagecheckoutps_step_one .form-group .form-control {
+    width: 100%;
+}
+
+#onepagecheckoutps .image_product img {
+    max-width: 100%;
+    height: auto;
+}
+
+#onepagecheckoutps .cart-overview.js-cart .js-cart-line-product-quantity {
+    max-width: 100%;
+    height: 2.6rem !important;
+    border: 1px solid rgba(0,0,0,.25);
+    border-radius: 0 !important;
+    padding: .175rem .5rem;
+}
+#onepagecheckoutps .product-available:empty {
+    display: none;
+}
+
+@media (min-width:576px){
+    /* CSS is added for the hidden-sm-up class since some templates do not have it */
+    .hidden-sm-up{
+        display:none!important
+    }
+}
+@media (max-width:575px){
+    /* CSS is added for the hidden-sm-up class since some templates do not have it */
+    div#onepagecheckoutps #field_customer_current_passwd,
+    div#onepagecheckoutps #field_customer_passwd,
+    div#onepagecheckoutps #field_customer_conf_passwd{
+        width: 100%;
+    }
+}
+
+@media (min-width:768px) {
+    div#onepagecheckoutps #opc_modal{
+        position: fixed !important;
+    }
+}
+
+@media (min-width:768px) and (max-width: 991px) {
+    div#onepagecheckoutps #opc_modal{
+        position: absolute !important;
+    }
+    div#onepagecheckoutps #field_customer_current_passwd,
+    div#onepagecheckoutps #field_customer_passwd,
+    div#onepagecheckoutps #field_customer_conf_passwd{
+        width: 100%;
+    }
+}
+
+#order-detail-content .presta-price, #order-detail-content .shipping-amount-display.checkout {
+    float: right;
+    margin: 0;
+}
+
+/* warehouse */
+.crossselling-products > h4 > span {
+    font-size: unset !important;
+}
+
+#onepagecheckoutps .crossselling-products input,
+#onepagecheckoutps .crossselling-products textarea,
+#onepagecheckoutps  .crossselling-products select {
+    border-radius:  0px !important;
+}
+
+/*template: transformer*/
+#onepagecheckoutps .btn i {
+    font-family: 'FontAwesomePTS';
+}

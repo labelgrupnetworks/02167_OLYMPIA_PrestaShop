@@ -1,0 +1,45 @@
+/**
+ * We offer the best and most useful modules PrestaShop and modifications for your online store.
+ *
+ * We are experts and professionals in PrestaShop
+ *
+ * NOTICE OF LICENSE
+ *
+ * This file is not open source! Each license that you purchased is only available for 1 wesite only.
+ * If you want to use this file on more websites (or projects), you need to purchase additional licenses.
+ * You are not allowed to redistribute, resell, lease, license, sub-license or offer our resources to any third party.
+ *
+ * @author    PresTeamShop SAS (Registered Trademark) <info@presteamshop.com>
+ * @copyright 2011-2022 PresTeamShop SAS, All rights reserved.
+ * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License version 3.0
+ *
+ * @category  PrestaShop
+ * @category  Module
+ */
+
+#opc_shipping_compability #checkout-delivery-step {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    box-shadow: none;
+}
+#opc_shipping_compability .content {
+    padding: 0 15px !important;
+    display: block !important;
+    margin: 0;
+}
+#footer,
+.aone-colors-live-preview.d-md-block,
+.breadcrumb,
+.breadcrumb-wrapper,
+#opc_shipping_compability .order-options > #delivery,
+#opc_shipping_compability button.continue,
+#opc_shipping_compability .step-title {
+    display: none !important;
+}
+body#checkout #wrapper {
+    padding: 0 !important;
+}
+body#checkout .container {
+    width: 100% !important;
+    padding: 0 !important;
+}

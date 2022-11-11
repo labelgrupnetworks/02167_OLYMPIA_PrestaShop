@@ -1,0 +1,38 @@
+services:
+  onepagecheckoutps.hook.display.header:
+    class: 'OnePageCheckoutPS\Hook\HookDisplayHeaderService'
+    arguments:
+      - '@onepagecheckoutps.module'
+
+  onepagecheckoutps.hook.additional_customer_form_fields:
+    class: 'OnePageCheckoutPS\Hook\HookAdditionalCustomerFormFieldsService'
+    arguments:
+      - '@onepagecheckoutps.module'
+      - '@onepagecheckoutps.prestashop.provider.context'
+      - '@onepagecheckoutps.core.myaccount'
+
+  onepagecheckoutps.hook.action.opc_payment_fee:
+    class: 'OnePageCheckoutPS\Hook\HookActionOpcPaymentFeeService'
+    arguments:
+      - '@onepagecheckoutps.module'
+      - '@onepagecheckoutps.prestashop.provider.context'
+
+  onepagecheckoutps.hook.action.opc_validate_payment:
+    class: 'OnePageCheckoutPS\Hook\HookActionOpcValidatePayment'
+    arguments:
+      - '@onepagecheckoutps.prestashop.provider.context'
+
+  onepagecheckoutps.hook.action.opc_validate_vat_number:
+    class: 'OnePageCheckoutPS\Hook\HookActionOpcValidateVatNumber'
+    arguments:
+      - '@onepagecheckoutps.prestashop.provider.context'
+
+  onepagecheckoutps.hook.action.customer_logout_after:
+    class: 'OnePageCheckoutPS\Hook\HookActionCustomerLogoutAfter'
+    arguments:
+      - '@onepagecheckoutps.prestashop.provider.context'
+
+  onepagecheckoutps.hook.action.opc_validation_customer_register:
+    class: 'OnePageCheckoutPS\Hook\HookActionOpcValidationCustomerRegister'
+    arguments:
+      - '@onepagecheckoutps.prestashop.provider.context'

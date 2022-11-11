@@ -1,0 +1,93 @@
+/**
+ * We offer the best and most useful modules PrestaShop and modifications for your online store.
+ *
+ * We are experts and professionals in PrestaShop
+ *
+ * NOTICE OF LICENSE
+ *
+ * This file is not open source! Each license that you purchased is only available for 1 wesite only.
+ * If you want to use this file on more websites (or projects), you need to purchase additional licenses.
+ * You are not allowed to redistribute, resell, lease, license, sub-license or offer our resources to any third party.
+ *
+ * @author    PresTeamShop SAS (Registered Trademark) <info@presteamshop.com>
+ * @copyright 2011-2022 PresTeamShop SAS, All rights reserved.
+ * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License version 3.0
+ *
+ * @category  PrestaShop
+ * @category  Module
+ */
+
+div#onepagecheckoutps #onepagecheckoutps_step_one .bestkit_customerattributes p {
+    width: 100%;
+}
+div#onepagecheckoutps #onepagecheckoutps_step_one .bestkit_customerattributes .form-group {
+    float: left;
+}
+div#onepagecheckoutps #onepagecheckoutps_step_one .bestkit_customerattributes .form-group .form-control-valign,
+div#onepagecheckoutps #onepagecheckoutps_step_one .bestkit_customerattributes .form-group .form-control-comment{
+    padding-top: 0;
+}
+div#onepagecheckoutps .checkout_feilds_wrapper {
+    padding: 0;
+}
+div#onepagecheckoutps #onepagecheckoutps_step_two #packetery-widget br {
+    display: none;
+}
+div#onepagecheckoutps div#onepagecheckoutps_step_three div#block-card-number {
+    width: 100%;
+}
+div#onepagecheckoutps #block-reassurance {
+    margin-top: 10px;
+}
+
+body#checkout .crossselling-products, body#checkout .crossselling-products .slick-list {
+    width: 100%;
+}
+
+/* Compatibilidad modulo orderfees_payment -V1.8.14 de motionSeed*/
+#onepagecheckoutps #order-detail-content .card-block {
+    margin-bottom: 0;
+    padding: 0;
+}
+#onepagecheckoutps #order-detail-content .card-block .cart-summary-line > div {
+    padding: 0;
+    text-align: right;
+}
+#onepagecheckoutps div#payment_method_container > div.module_payment_container > div.payment-option {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* support module: eabi_postoffice - v0.16 - Matis Halmann */
+.delivery-option > .col-sm-1{
+    display: none;
+}
+label.delivery-option-2 {
+    color: initial;
+    max-width: 100% !important;
+}
+label.delivery-option-2 select{
+    width: 100% !important;
+}
+label.delivery-option-2 .col-sm-5.col-xs-12 {
+    max-width: 20% !important;
+}
+label.delivery-option-2 .col-sm-4.col-xs-12 {
+    max-width: 55% !important;
+}
+/* END - support module: eabi_postoffice - v0.16 - Matis Halmann */
+
+/* support module: amazonpay - v1.1.4 - patworx multimedia GmbH */
+#onepagecheckoutps_step_three .payment_content_html .amazonPayButton {
+    display: none;
+}
+#onepagecheckoutps_step_one .amazonPayButton {
+    margin: 10px auto;
+}
+/* END support module: amazonpay - v1.1.4 - patworx multimedia GmbH */
+
+/* support module: ets_payment_with_fee - v2.0.8 - ETS-Soft */
+#order-detail-content #cart-subtotal-fee_payment {
+    display: none;
+}
+/* END support module: ets_payment_with_fee - v2.0.8 - ETS-Soft */

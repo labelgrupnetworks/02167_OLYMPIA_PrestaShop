@@ -1,0 +1,35 @@
+imports:
+  - { resource: ../common.yml }
+  - { resource: ../hooks.yml }
+  - { resource: hooks.yml }
+
+services:
+  onepagecheckoutps.core.myaccount:
+    class: 'OnePageCheckoutPS\Application\Core\MyAccount\MyAccountService'
+    arguments:
+      - '@onepagecheckoutps.core.core_service'
+
+  onepagecheckoutps.core.addresses:
+    class: 'OnePageCheckoutPS\Application\Core\Addresses\AddressesService'
+    arguments:
+      - '@onepagecheckoutps.core.core_service'
+
+  onepagecheckoutps.core.shipping:
+    class: 'OnePageCheckoutPS\Application\Core\Shipping\ShippingService'
+    arguments:
+      - '@onepagecheckoutps.core.core_service'
+
+  onepagecheckoutps.core.payment:
+    class: 'OnePageCheckoutPS\Application\Core\Payment\PaymentService'
+    arguments:
+      - '@onepagecheckoutps.core.core_service'
+
+  onepagecheckoutps.core.cart:
+    class: 'OnePageCheckoutPS\Application\Core\Cart\CartService'
+    arguments:
+      - '@onepagecheckoutps.core.core_service'
+
+  onepagecheckoutps.repository.address:
+    class: 'OnePageCheckoutPS\Repository\AddressRepository'
+    arguments:
+      - '@onepagecheckoutps.module'
