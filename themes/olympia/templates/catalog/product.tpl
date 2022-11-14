@@ -112,8 +112,8 @@
                         {/block}
 
                         {block name='page_header'}
-                        <h1 class="h1 page-title"><span>{block name='page_title'}{$product.name}{/block}</span></h1>
-                    {/block}
+                            <h1 class="h1 page-title"><span>{block name='page_title'}{$product.name}{/block}</span></h1>
+                        {/block}
                         {block name='product_brand_below'}
                             {if $iqitTheme.pp_man_logo == 'title'}
                                 {if isset($product_manufacturer->id) && $product_manufacturer->active}
@@ -127,8 +127,8 @@
                                         {else}
                                             <label class="label">{l s='Brand' d='Shop.Theme.Catalog'}:</label>
                                             <span>
-            <a href="{$product_brand_url}">{$product_manufacturer->name}</a>
-          </span>
+                                                <a href="{$product_brand_url}">{$product_manufacturer->name}</a>
+                                            </span>
                                         {/if}
 
                                 {/if}
@@ -170,6 +170,10 @@
                     {/if}
 
                     <div class="product-actions js-product-actions">
+                        {block name='hook_reserva'}
+                            {hook h='displayReserva'}
+                        {/block}
+
                         {block name='product_buy'}
                             <form action="{$urls.pages.cart}" method="post" id="add-to-cart-or-refresh">
                                 <input type="hidden" name="token" value="{$static_token}">
@@ -219,7 +223,7 @@
                         {/block}
 
                         {block name='hook_display_reassurance'}
-                            {hook h='displayReassurance'}
+                            {*hook h='displayReassurance'*}
                         {/block}
 
                         {if $iqitTheme.pp_tabs_placement == 'rightcolumn'}
