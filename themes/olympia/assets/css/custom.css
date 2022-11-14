@@ -501,6 +501,10 @@
     display: none;
 }
 
+.kb-booking-product-price-block {
+    display: none;
+}
+
 /* SOBRE NOSOTROS (Y OTROS CMS) */
 #cms .page-header {
     display: none;

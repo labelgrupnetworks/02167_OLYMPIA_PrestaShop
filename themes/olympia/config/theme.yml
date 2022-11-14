@@ -12,4 +12,8 @@ assets:
         path: assets/css/font-awesome/css/font-awesome.css
         media: all
         priority: 200
-
+global_settings:
+  hooks:
+    modules_to_hook:
+      displayReserva:
+        - kbbookingcalendar
