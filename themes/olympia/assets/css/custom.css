@@ -393,13 +393,19 @@
     background: #324F57;
 }
 
+
+
+#col-product-info .fa-shopping-bag:before {
+    content: url(../img/bg_carrito.png) !important;
+}
+
 .product-additional-info {
     border-top: none;
 }
 
 .product-sections {
     background: #F7F9FD;
-    padding: 15px;
+    padding: 15px 15px 10px 15px;
 }
 
 .product-sections p {
@@ -415,6 +421,79 @@
     color: #2F3136 !important;
 }
 
+<<<<<<< HEAD
+=======
+#product-details-wrapper, #iqit-reviews-tab {
+    display: none;
+}
+
+.social-sharing .facebook {
+    background: #3B5998;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 7px 15px 7px 15px;
+}
+
+.social-sharing a {
+    color: #ffffff !important;
+    font-size: 17px;
+}
+
+.social-sharing .facebook:after {
+    content: 'Facebook';
+    margin-left: 15px !important;
+}
+
+
+.social-sharing .twitter {
+    background: #55ACEE;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 7px 15px 7px 15px;
+}
+
+
+.social-sharing .twitter:after {
+    content: 'Twitter';
+    margin-left: 15px !important;
+}
+
+.social-sharing .pinterest {
+    background: #CC2127;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 7px 15px 7px 15px;
+}
+
+
+.social-sharing .pinterest:after {
+    content: 'Pinterest';
+    margin-left: 15px !important;
+}
+
+.product-accessories .section-title, .viewed-products .section-title {
+     border-bottom: none !important;
+    padding-bottom: 0px !important;
+    font-size: 30px !important;
+    font-family: 'Georgia';
+    color: #2F3136 !important;
+}
+
+.product-accessories {
+    background: #F2F5FC;
+    padding: 50px 0px 50px;
+    width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+>>>>>>> feature/maquetacion
 .datetimepicker.datetimepicker-dropdown-bottom-right {
     opacity: 1;
     visibility: visible;
@@ -424,6 +503,11 @@
     transition: inherit;
     display: none;
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> feature/maquetacion
 
 /* SOBRE NOSOTROS (Y OTROS CMS) */
 #cms .page-header {
@@ -531,13 +615,37 @@
     padding-botttom: 50px !important;
 }
 
-.my-account-side-links #address-link {
+.my-account-side-links #address-link, .my-account-side-links #addresses-link {
     display: none;
 }
 
 .my-account-side-links #order-slips-link {
     display: none;
 }
+
+#history .page-title {
+    border-bottom: none !important;
+    font-size: 38px;
+    color: #2F3136;
+    font-family: 'Georgia';
+    padding-bottom: 0px !important;
+}
+
+#history .my-account-page-content {
+    color: #2F3136;
+}
+
+#history .table .thead-default th {
+    background: #E3E8F3;
+    font-size: 14px !important;
+}
+
+#history .table td, #history .table tbody th {
+    background: #F7F9FD;
+    font-size: 14px !important;
+}
+
+
 
 /* CARRITO */
 #cart .page-title {
