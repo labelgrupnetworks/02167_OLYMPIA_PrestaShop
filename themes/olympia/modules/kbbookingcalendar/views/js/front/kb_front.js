@@ -185,7 +185,8 @@ $(document).ready(function () {
     });
     if (typeof kb_is_booking_product != 'undefined') {
         $('#product .product-actions').find('.product-add-to-cart').hide();
-        $('#product .product-prices').remove();
+        /* Mostramos la capa original del tema donde se muestra el precio */
+        // $('#product .product-prices').remove();
         $('.kb-booking-product-block').show().insertBefore($('#product .product-actions').firstChild)
     }
 

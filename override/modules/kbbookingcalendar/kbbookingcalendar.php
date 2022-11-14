@@ -87,9 +87,22 @@ class KbbookingcalendarOverride extends Kbbookingcalendar
                             'current_date' => date('Y-m-d'),
                         )
                     );
-                    return $this->context->smarty->fetch(_PS_MODULE_DIR_ . $this->name . '/views/templates/hook/product_addcart.tpl');
+                    $template = $this->getTemplate($this->name . '/views/templates/hook/product_addcart.tpl');
+                    return $this->context->smarty->fetch($template);
                 }
             }
         }
+    }
+
+    protected function getTemplate($template_name) {
+        $template = false;
+        $overridden_template = Context::getContext()->shop->getTheme() . 'modules' . DIRECTORY_SEPARATOR . $template_name;
+        $module_template = _PS_MODULE_DIR_ . $template_name;
+        if (file_exists($overridden_template)) {
+            $template = $overridden_template;
+        } else if (file_exists($module_template)) {
+            $template = $module_template;
+        } 
+        return $template;
     }
 }
