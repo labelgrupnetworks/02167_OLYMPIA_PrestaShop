@@ -421,8 +421,6 @@
     color: #2F3136 !important;
 }
 
-<<<<<<< HEAD
-=======
 #product-details-wrapper, #iqit-reviews-tab {
     display: none;
 }
@@ -493,7 +491,6 @@
   margin-right: -50vw;
 }
 
->>>>>>> feature/maquetacion
 .datetimepicker.datetimepicker-dropdown-bottom-right {
     opacity: 1;
     visibility: visible;
@@ -503,11 +500,6 @@
     transition: inherit;
     display: none;
 }
-<<<<<<< HEAD
-=======
-
-
->>>>>>> feature/maquetacion
 
 /* SOBRE NOSOTROS (Y OTROS CMS) */
 #cms .page-header {
