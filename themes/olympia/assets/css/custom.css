@@ -501,6 +501,21 @@
     display: none;
 }
 
+.kb-booking-product-price-block {
+    display: none;
+}
+
+.datetimepicker .next:before  {
+    content: '>' !important;
+}
+
+.datetimepicker .prev:before  {
+    content: '<' !important;
+}
+
+.datetimepicker .next i, .datetimepicker .prev i {
+    display: none !important;
+}
 
 
 /* SOBRE NOSOTROS (Y OTROS CMS) */
@@ -583,7 +598,7 @@
 }
 
 /* ZONA DE USUARIO */
-.dropdown-menu i {
+#header-user-btn .dropdown-menu i {
     display: none;
 }
 
@@ -609,7 +624,7 @@
     padding-botttom: 50px !important;
 }
 
-.my-account-side-links #address-link, .my-account-side-links #addresses-link {
+.my-account-side-links #address-link, .my-account-side-links #addresses-link, .my-account-side-links #discounts-link {
     display: none;
 }
 
@@ -639,7 +654,110 @@
     font-size: 14px !important;
 }
 
+.width_status {
+    min-width: 150px !important;
+}
 
+
+#module-iqitwishlist-view .page-title {
+    border-bottom: none !important;
+    font-size: 38px;
+    color: #2F3136;
+    font-family: 'Georgia';
+    padding-bottom: 0px !important;
+}
+
+#module-iqitwishlist-view .my-account-page-content {
+    color: #2F3136;
+}
+
+#module-iqitwishlist-view .table .thead-default th {
+    background: #E3E8F3;
+    font-size: 14px !important;
+}
+
+#module-iqitwishlist-view .table td, #history .table tbody th {
+    background: #F7F9FD;
+    font-size: 14px !important;
+}
+
+#iqitwishlist-share {
+    display: none;
+}
+
+#module-iqitwishlist-view .product-price {
+    color: #2F3136;
+}
+
+#module-iqitwishlist-view .input-group-add-cart .form-control {
+    width: 50px !important;
+}
+
+#order-detail .page-title {
+    border-bottom: none !important;
+    font-size: 38px;
+    color: #2F3136;
+    font-family: 'Georgia';
+    padding-bottom: 0px !important;
+}
+
+#order-detail .my-account-page-content {
+    color: #2F3136;
+}
+
+#order-detail .table .thead-default th {
+    background: #E3E8F3;
+    font-size: 14px !important;
+}
+
+#order-detail .table td, #history .table tbody th {
+    background: #F7F9FD;
+    font-size: 14px !important;
+}
+
+#order-detail .form-control {
+    background: #f3f3f3;
+}
+
+
+
+#module-loyaltyrewardpoints-customeraccount .page-title {
+    border-bottom: none !important;
+    font-size: 38px;
+    color: #2F3136;
+    font-family: 'Georgia';
+    padding-bottom: 0px !important;
+}
+
+#module-loyaltyrewardpoints-customeraccount .my-account-page-content {
+    color: #2F3136;
+}
+
+#module-loyaltyrewardpoints-customeraccount .table .thead-default th {
+    background: #E3E8F3;
+    font-size: 14px !important;
+}
+
+#module-loyaltyrewardpoints-customeraccount .table td, #history .table tbody th {
+    background: #F7F9FD;
+    font-size: 14px !important;
+}
+
+#module-loyaltyrewardpoints-customeraccount .form-control {
+    background: #f3f3f3;
+}
+
+#module-loyaltyrewardpoints-customeraccount .points-card span {
+    color: #117393;
+}
+
+#module-loyaltyrewardpoints-customeraccount .points-card {
+    text-align: center;
+}
+
+#module-loyaltyrewardpoints-customeraccount h6 {
+    margin-top: 30px !important;
+}
 
 /* CARRITO */
 #cart .page-title {
@@ -687,6 +805,19 @@
 
 #cart .cart-grid-body .btn-secondary i {
     color: #117393 !important;
+}
+
+#cart #cart-points-summary {
+    display: none;
+}
+
+#cart #lrp-points {
+    background: #F2F5FC url(../img/bg_puntos.png) no-repeat left;
+    padding-left: 75px;
+}
+
+#cart #lrp-points i {
+    display: none;
 }
 
 /* CHECKOUT */
@@ -777,4 +908,41 @@
     text-transform: capitalize !important;
 }
 
+#onepagecheckoutps_step_two_container {
+    display: none;
+}
 
+#checkout .right_content .col-xl-6, #checkout .right_content .col-md-6, #checkout .right_content .col-lg-6 {
+    -ms-flex: 0 0 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+}
+
+#onepagecheckoutps_step_three #lrp-points {
+    display: none;
+}
+
+#checkout .payment_content_html {
+    display: none !important;
+}
+
+#checkout .alert-info {
+    border-color: #ffffff !important;
+    background: #ffffff !important;
+}
+
+#header-order-detail-content * {
+    text-decoration: none !important;
+}
+
+#order-detail-content * {
+    font-size: 14px !important;
+}
+
+#checkout .cart-line-product-quantity, #checkout .bootstrap-touchspin .btn {
+    background: #F8F8F8 !important;
+}
+
+.promo-imput {
+    background: #F7F9FD;
+}
