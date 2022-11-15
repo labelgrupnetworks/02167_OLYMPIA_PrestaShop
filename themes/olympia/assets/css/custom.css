@@ -812,8 +812,9 @@
 }
 
 #cart #lrp-points {
-    background: #F2F5FC url(../img/bg_puntos.png) no-repeat left;
-    padding-left: 75px;
+    background: #ffffff url(../img/bg_puntos_blanco.png) no-repeat top left;
+    padding-left: 50px;
+    border: 1px solid #DDE3F1;
 }
 
 #cart #lrp-points i {
@@ -943,6 +944,92 @@
     background: #F8F8F8 !important;
 }
 
-.promo-imput {
-    background: #F7F9FD;
+.promo-imput, #discount_name {
+    background: #F7F9FD !important;
+    border-radius: 0px !important;
+}
+
+.promo-code-button {
+    margin-bottom: 15px !important;
+    float:  left;
+    width: 100%;
+}
+
+#div_leave_message .form-control {
+    background: #F7F9FD !important;
+    height: 110px !important;
+    min-height: 110px !important;
+    resize: none !important;
+    border-radius: 0px !important;
+}
+
+#buttons_footer_review .btn-primary {
+    font-size: 15px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    background: #2C2323 !important;
+}
+
+#buttons_footer_review .btn-primary i {
+    display: none !important;
+}
+
+#buttons_footer_review .btn-link {
+    font-size: 12px !important;;
+    color: #2C2323 !important;
+}
+
+#buttons_footer_review .btn-link i {
+    color: #117393 !important;
+}
+
+#checkout #lrp-points {
+    background: #ffffff url(../img/bg_puntos_blanco.png) no-repeat top left;
+    padding-left: 50px;
+    margin: 20px 15px 0px 15px !important;
+    font-size: 15px !important;
+    border: 1px solid #DDE3F1;
+}
+
+#checkout #lrp-points i {
+    display: none;
+}
+
+
+#checkout #cart-points-summary {
+    background: #F2F5FC url(../img/bg_puntos.png) no-repeat left;
+    padding-left: 50px;
+    margin: 20px 0px 0px 0px !important;
+    font-size: 15px !important;
+}
+
+div#onepagecheckoutps span, div#onepagecheckoutps em, div#onepagecheckoutps label {
+    font-size: 15px !important;
+}
+
+#checkout #cart-points-summary i {
+    display: none;
+}
+
+#checkout #cart-points-summary .card {
+    border: none !important;
+    padding: 15px 0px 15px 0px !important;
+}
+
+#lrp-redeem-link {
+    color: #117393;
+    margin-left: 10px;
+}
+
+#btn-lrp-redeem, #lrp-redeem-form .btn-secondary, #cart .cart-grid-body .btn-secondary {
+    background: #0F261F !important;
+    color: #ffffff !important;
+}
+
+#checkout .product-price {
+    color: #2F3136;
+}
+
+#cart-subtotal-shipping {
+    display: none;
 }
