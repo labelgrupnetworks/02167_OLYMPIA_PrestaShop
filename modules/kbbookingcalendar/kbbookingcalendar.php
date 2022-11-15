@@ -839,9 +839,6 @@ class Kbbookingcalendar extends Module
                     } else {
                         $product_price = Product::getPriceStatic($id_product, true, null, 6);
                     }
-//                    $product_price = Tools::displayPrice($actual_price);
-                    
-//                    $product_price = Tools::convertPriceFull($booking_product['price'], Currency::getDefaultCurrency());
                     $product_price = Tools::convertPriceFull($product_price, Currency::getDefaultCurrency());
                     $room_category = KbBookingRoomCategory::getAvailableRoomCategory();
                     $booking_date_details = Tools::jsonDecode($booking_product['date_details'], true);
@@ -888,8 +885,6 @@ class Kbbookingcalendar extends Module
             }
         }
     }
-    
-    
     public function hookDisplayProductAdditionalInfo($params)
     {
         $kb_setting = Tools::jsonDecode(Configuration::get('KB_BOOKING_CALENDAR_GENERAL_SETTING'), true);

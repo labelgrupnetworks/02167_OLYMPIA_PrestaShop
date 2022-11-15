@@ -943,6 +943,7 @@
 #checkout .cart-line-product-quantity, #checkout .bootstrap-touchspin .btn {
     background: #F8F8F8 !important;
 }
+<<<<<<< HEAD
 
 .promo-imput, #discount_name {
     background: #F7F9FD !important;
@@ -1033,3 +1034,5 @@ div#onepagecheckoutps span, div#onepagecheckoutps em, div#onepagecheckoutps labe
 #cart-subtotal-shipping {
     display: none;
 }
+=======
+>>>>>>> develop
