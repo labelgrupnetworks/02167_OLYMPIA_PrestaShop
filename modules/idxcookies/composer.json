@@ -1,0 +1,15 @@
+{
+    "name": "innovadeluxe/idxcookies",
+    "authors": [
+        {
+            "name": "Innovadeluxe",
+            "email": "soporte@innovadeluxe.com"
+        }
+    ],
+    "autoload": {
+        "classmap": [
+            "classes", "lib"
+        ]
+    },
+    "require": {}
+}

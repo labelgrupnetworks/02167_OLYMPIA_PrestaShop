@@ -1,0 +1,99 @@
+/**
+ * We offer the best and most useful modules PrestaShop and modifications for your online store.
+ *
+ * We are experts and professionals in PrestaShop
+ *
+ * NOTICE OF LICENSE
+ *
+ * This file is not open source! Each license that you purchased is only available for 1 wesite only.
+ * If you want to use this file on more websites (or projects), you need to purchase additional licenses.
+ * You are not allowed to redistribute, resell, lease, license, sub-license or offer our resources to any third party.
+ *
+ * @author    PresTeamShop SAS (Registered Trademark) <info@presteamshop.com>
+ * @copyright 2011-2022 PresTeamShop SAS, All rights reserved.
+ * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License version 3.0
+ *
+ * @category  PrestaShop
+ * @category  Module
+ */
+
+/* paytpv - v7.7.1 - Paycomet */
+body#checkout #paytpv_iframe {
+    height: 1210px !important;
+    width: 375px !important;
+    margin: 0 auto;
+    display: block;
+}
+body#checkout .paytpv {
+    border: none;
+}
+
+/* correos - v5.0.21 - Correos */
+body#checkout .correos-carrer-content .correosOfficeName_ {
+    padding: 10px;
+    border: 1px solid;
+    float: left;
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+}
+body#checkout .correos-carrer-content .correos_popuplink {
+    display: block;
+    text-align: left;
+    float: left;
+}
+
+/* openpayprestashop - v4.2.0 - Openpay SA de CV */
+body#checkout .openpay-form-container {
+    border: none;
+}
+
+/* amazonpay - v4.1.1 - patworx multimedia GmbH */
+body#authentication #opc_login_social .amazonPayButton.amazonLogin {
+    height: 45px !important;
+    width: 125px !important;
+    margin-bottom: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 0;
+}
+
+/* Compatibilities Templates */
+body#checkout #header .header-container {
+    position: initial;
+}
+body#checkout #opc_main .alert::before {
+    content: none;
+}
+body#checkout #cookiesplus-modal-container {
+    min-height: auto;
+}
+body#checkout #payment-confirmation button {
+    min-height: initial;
+    max-height: initial;
+}
+
+/* theme: panda - No muestra bien los modales*/
+.st-pusher {
+    z-index: initial !important;
+}
+
+/* support module: oneallsociallogin - v4.7.1 - OneAll LLC */
+#hook-displayCustomerAccountFormTop > .oneall_social_login_block {
+    display: none;
+}
+
+/* support module: idxvalidatinguser - v4.1.6 - innovadeluxe */
+body#checkout #idxrvalidatinguser {
+    padding: 20px 0 0;
+}
+
+/* support module: stripejs - v4.5.2 - NTS */
+body#checkout .module_payment_container .stripe-payment-17 {
+    margin: 0;
+}
+
+/* gmparcellocker - v1.4.1 - GreenMouseStudio.com */
+body#checkout .delivery-options .easypack-widget {
+    height: auto;
+}

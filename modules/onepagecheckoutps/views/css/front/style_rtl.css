@@ -1,0 +1,152 @@
+/**
+ * We offer the best and most useful modules PrestaShop and modifications for your online store.
+ *
+ * We are experts and professionals in PrestaShop
+ *
+ * NOTICE OF LICENSE
+ *
+ * This file is not open source! Each license that you purchased is only available for 1 wesite only.
+ * If you want to use this file on more websites (or projects), you need to purchase additional licenses.
+ * You are not allowed to redistribute, resell, lease, license, sub-license or offer our resources to any third party.
+ *
+ * @author    PresTeamShop SAS (Registered Trademark) <info@presteamshop.com>
+ * @copyright 2011-2022 PresTeamShop SAS, All rights reserved.
+ * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License version 3.0
+ *
+ * @category  PrestaShop
+ * @category  Module
+ */
+
+div#onepagecheckoutps .onepagecheckoutps_p_step.p_address{
+    text-align: right;
+}
+div#onepagecheckoutps #onepagecheckoutps_step_one .account_creation p{
+    float: right;
+    margin-left: 10px;
+}
+div#onepagecheckoutps #onepagecheckoutps_step_two div.extra_info_carrier a {
+    text-align: left;
+}
+div#onepagecheckoutps #onepagecheckoutps_step_two .delivery_option > div.radio {
+    float: right;
+}
+div#onepagecheckoutps #onepagecheckoutps_step_review table#cart_summary .cart_total_price .total_price_container{
+    border-left: none;
+}
+div#onepagecheckoutps #onepagecheckoutps_step_review #cart_voucher p{
+    float: right;
+}
+div#onepagecheckoutps div#onepagecheckoutps_step_review #div_cgv label{
+    padding-right: 5px;
+}
+div#onepagecheckoutps div#onepagecheckoutps_step_review #buttons_checkout{
+    float: right;
+}
+div#onepagecheckoutps div#onepagecheckoutps_step_review tr.cart_total_price #cart_voucher h4{
+    float: right;
+    margin: 0 0 0 10px;
+}
+div#onepagecheckoutps div#onepagecheckoutps_step_review #order-detail-content .image_zoom{
+    left: auto !important;
+    right: 0 !important;
+}
+#onepagecheckoutps_step_two_container .inpost{
+    margin-right: 0 !important;
+}
+div#onepagecheckoutps{
+    text-align: right;
+}
+div#onepagecheckoutps .onepagecheckoutps_p_step i.fa-pts{
+    margin-left: 5px;
+}
+div#onepagecheckoutps input,
+div#onepagecheckoutps select{
+    text-align: right;
+}
+div#onepagecheckoutps #opc_show_login i.fa-pts,
+div#onepagecheckoutps .panel-title i.fa-pts{
+    margin-left: 5px;
+}
+div#onepagecheckoutps div#div_onepagecheckoutps_info h2{
+    text-align: right;
+}
+div#onepagecheckoutps input.valid{
+    padding-left: 24px !important;
+}
+div#onepagecheckoutps input.error{
+    padding-left: 24px !important;
+}
+div#onepagecheckoutps span.form-error{
+    text-align: left;
+}
+div#onepagecheckoutps #onepagecheckoutps_step_one #opc_show_login{
+    margin-left: 5px;
+}
+div#onepagecheckoutps #onepagecheckoutps_step_two div.delivery_option{
+    float: right;
+}
+div#onepagecheckoutps div#onepagecheckoutps_step_review .cart_quantity .cart_quantity_button > div > .input-group:last-child {
+    float: left;
+}
+div#onepagecheckoutps div#onepagecheckoutps_step_review .cart_quantity .cart_quantity_button .input-group span:last-child {
+    margin-right: -4px;
+}
+div#onepagecheckoutps div#onepagecheckoutps_step_review .cart_quantity .cart_quantity_button .input-group span:first-child {
+    margin-left: -4px;
+}
+div#onepagecheckoutps div#onepagecheckoutps_step_review .cart_quantity .cart_quantity_delete,
+div#onepagecheckoutps div#onepagecheckoutps_step_review .cart_quantity .megacart_quantity_delete {
+    margin-right: 4px;
+}
+div#onepagecheckoutps #onepagecheckoutps_step_review #list-voucher-allowed > div {
+    float: right !important;
+}
+div#onepagecheckoutps .onepagecheckoutps_p_step_four {
+    padding-right: 5px;
+}
+
+@media (max-width: 992px) {
+    div#onepagecheckoutps #onepagecheckoutps_step_review #buttons_footer_review > div {
+        float: right !important;
+    }
+}
+
+div.loading_big{
+    right: 0;
+}
+.loading_big i.fa-pts{
+    right: 48%;
+}
+.pts .nopadding-right {
+    padding-left: 0 !important;
+}
+.pts .nopadding-left {
+    padding-left: 0 !important;
+}
+
+#header-order-detail-content > div{
+    float: right;
+}
+div#onepagecheckoutps #onepagecheckoutps_step_one div.form-group label {
+    float: right;
+}
+
+#onepagecheckoutps .text-md-right {
+    text-align: right !important;
+}
+
+div#onepagecheckoutps div#onepagecheckoutps_step_review .bootstrap-touchspin .cart-line-product-quantity {
+    border-radius: 0px 5px 5px 0px !important;
+}
+
+div#onepagecheckoutps div#onepagecheckoutps_step_review .bootstrap-touchspin .input-group-btn-vertical .btn-touchspin.bootstrap-touchspin-up {
+    border-radius: 5px 0 0 0 !important;
+}
+div#onepagecheckoutps div#onepagecheckoutps_step_review .bootstrap-touchspin .input-group-btn-vertical .btn-touchspin.bootstrap-touchspin-down {
+    border-radius: 0 0 0 5px !important;
+}
+
+div#onepagecheckoutps div#onepagecheckoutps_step_review .remove-from-cart {
+    margin-right: 5px;
+    margin-left: 0px;
+}

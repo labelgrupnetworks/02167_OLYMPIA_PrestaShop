@@ -1,0 +1,22 @@
+<?php
+/**
+* This protect the directory
+* 
+* Do not edit or add to this file if you wish to upgrade the module to newer
+* versions in the future.
+* 
+* @author    Globo Software Solution JSC <contact@globosoftware.net>
+* @copyright 2017 Globo ., Jsc
+* @license   please read license in file license.txt
+* @link	     http://www.globosoftware.net
+*/
+
+header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
+header('Last-Modified: '.gmdate('D, d M Y H:i:s').' GMT');
+
+header('Cache-Control: no-store, no-cache, must-revalidate');
+header('Cache-Control: post-check=0, pre-check=0', false);
+header('Pragma: no-cache');
+
+header('Location: ../');
+exit;

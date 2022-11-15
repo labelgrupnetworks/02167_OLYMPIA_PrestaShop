@@ -1,0 +1,20 @@
+<?php
+/**
+ * We offer the best and most useful modules PrestaShop and modifications for your online store.
+ *
+ * We are experts and professionals in PrestaShop
+ *
+ * NOTICE OF LICENSE
+ *
+ * This file is not open source! Each license that you purchased is only available for 1 wesite only.
+ * If you want to use this file on more websites (or projects), you need to purchase additional licenses.
+ * You are not allowed to redistribute, resell, lease, license, sub-license or offer our resources to any third party.
+ *
+ * @author    PresTeamShop SAS (Registered Trademark) <info@presteamshop.com>
+ * @copyright 2011-2022 PresTeamShop SAS, All rights reserved.
+ * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License version 3.0
+ *
+ * @category  PrestaShop
+ * @category  Module
+ */
+  namespace OnePageCheckoutPS\Application;use Configuration;use Db;use DbQuery;use Module;use OnePageCheckoutPS\Exception\PresTeamShopException;use Symfony\Component\HttpClient\HttpClient;use Tools;use Validate;class PresTeamShop{public static function getContent($l8aduk4j){if(!function_exists('curl_init')){throw new PresTeamShopException('CURL functions not available for registration module.',PresTeamShopException::PTS_CURL_DISABLED);}if(Tools::isSubmit('validate_license')){$l8aduk4k=Tools::getValue('license_number','');if(empty($l8aduk4k)){throw new PresTeamShopException('Please enter the license to do the validation of the module.',PresTeamShopException::PTS_LICENSE_EMPTY);}$l8aduk4l=array('server' =>array('SERVER_NAME' =>Tools::strtolower($_SERVER['SERVER_NAME'])),'module_name' =>$l8aduk4j->name,'version_module' =>Configuration::get($l8aduk4j->prefix_module.'_VERSION'),'ps_version' =>_PS_VERSION_,'url_store' =>$l8aduk4j->getShopProvider()->getShopUrl($l8aduk4j->getShopProvider()->getIdentifier()),'license_number' =>$l8aduk4k,);$l8aduk4m['params']=Tools::jsonEncode($l8aduk4l);$l8aduk4n=HttpClient::create();$l8aduk4o=$l8aduk4n->request('POST','https://www.'.Tools::strtolower($l8aduk4j->author).'.com/pts_rm.php',array('body' =>$l8aduk4m));$l8aduk4p=$l8aduk4o->toArray();if(is_array($l8aduk4p)){if($l8aduk4p['code']===-1){$l8aduk4j->errors[]=$l8aduk4p['message'];}elseif($l8aduk4p['code']===0){Configuration::deleteByName($l8aduk4j->prefix_module.'_DOMAIN');Configuration::deleteByName($l8aduk4j->prefix_module.'_RM');Configuration::updateGlobalValue($l8aduk4j->prefix_module.'_DOMAIN',$l8aduk4p['domain']);Configuration::updateGlobalValue($l8aduk4j->prefix_module.'_RM','1');$l8aduk4j->setConfigurations();$l8aduk4j->html .=$l8aduk4j->displayConfirmation($l8aduk4p['message']);}}}$l8aduk4j->getContextProvider()->getSmarty()->assign('isModuleValid',self::isValid($l8aduk4j));}public static function isValid($l8aduk4j){$l8aduk4q=Tools::strtolower($_SERVER['SERVER_NAME']);$l8aduk4q=str_ireplace('www.','',$l8aduk4q);$l8aduk4r=Configuration::get($l8aduk4j->prefix_module.'_DOMAIN');$l8aduk4s='/^(([1-9]?[0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5]).){3}([1-9]?[0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/';$l8aduk4t=preg_match($l8aduk4s,$l8aduk4q);if(Module::isInstalled('languageperdomain')){$l8aduk4u=Module::getInstanceByName('languageperdomain');if(Validate::isLoadedObject($l8aduk4u)&&$l8aduk4u->active){$l8aduk4v=new DbQuery();$l8aduk4v->select('new_target');$l8aduk4v->from('languageperdomain');$l8aduk4v->where('lang_id = '.$l8aduk4j->getContextProvider()->getLanguageId());$l8aduk4v->where('target_replace = '.$l8aduk4j->getShopProvider()->getIdentifier());$l8aduk4w=Db::getInstance(_PS_USE_SQL_SLAVE_)->getRow($l8aduk4v);if($l8aduk4w){$l8aduk4x=str_ireplace('www.','',Tools::strtolower($l8aduk4w['new_target']));if($l8aduk4x ===$l8aduk4q){return true;}}}}if($l8aduk4t ||$l8aduk4q ==='localhost'){return true;}if($l8aduk4j->getShopProvider()->isMultistoreActive()){$l8aduk4y=$l8aduk4j->getShopProvider()->getShops();foreach($l8aduk4y as $l8aduk4z){$l8aduk4x=str_ireplace('www.','',Tools::strtolower($l8aduk4z['domain']));if($l8aduk4r ===md5($l8aduk4x.'t3mp0r4l')){return true;}}}else{if($l8aduk4r ===md5($l8aduk4q.'t3mp0r4l')){return true;}}Configuration::updateValue($l8aduk4j->prefix_module.'_RM','0');return false;}}

@@ -1,0 +1,83 @@
+/**
+ * We offer the best and most useful modules PrestaShop and modifications for your online store.
+ *
+ * We are experts and professionals in PrestaShop
+ *
+ * NOTICE OF LICENSE
+ *
+ * This file is not open source! Each license that you purchased is only available for 1 wesite only.
+ * If you want to use this file on more websites (or projects), you need to purchase additional licenses.
+ * You are not allowed to redistribute, resell, lease, license, sub-license or offer our resources to any third party.
+ *
+ * @author    PresTeamShop SAS (Registered Trademark) <info@presteamshop.com>
+ * @copyright 2011-2022 PresTeamShop SAS, All rights reserved.
+ * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License version 3.0
+ *
+ * @category  PrestaShop
+ * @category  Module
+ */
+
+ @media (max-width: 991px) {
+    #onepagecheckoutps .right_content {
+        padding-top: 20px;
+    }
+    /*Compatibilidad con warehouse v4.3.2*/
+    #onepagecheckoutps .modal-content {
+        min-height: auto;
+    }
+ }
+
+@media (max-width: 767px) {
+    div#onepagecheckoutps #onepagecheckoutps_step_two_container,
+    div#onepagecheckoutps #onepagecheckoutps_step_three_container,
+    div#onepagecheckoutps #onepagecheckoutps_step_review{
+        margin-top: 15px !important;
+    }
+    div#onepagecheckoutps div#onepagecheckoutps_step_one #opc_show_login{
+        font-size: 13px;
+    }
+    div#onepagecheckoutps div#onepagecheckoutps_step_two #shipping_container .delivery_option_logo img {
+        max-width: 65px;
+        min-width: 65px;
+        cursor: pointer;
+    }
+    div#onepagecheckoutps div#onepagecheckoutps_step_three #payment_method_container .payment_image img {
+        max-width: 65px;
+        min-width: 65px;
+        cursor: pointer;
+    }
+    div#onepagecheckoutps #onepagecheckoutps_step_review .cart_item{
+        display:flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    div#onepagecheckoutps #onepagecheckoutps_step_review .cart_item > div {
+        margin-bottom: 0.5em;
+    }
+    div#onepagecheckoutps #onepagecheckoutps_step_review .cart_item div.quantity-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .nopadding-xs {
+        padding: 0 !important;
+    }
+    div#onepagecheckoutps #onepagecheckoutps_step_review #order-detail-content .item_total{
+        height: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    div#onepagecheckoutps div#onepagecheckoutps_step_review .cart_item {
+        display: flex;
+        align-items: center;
+    }
+    div#onepagecheckoutps #onepagecheckoutps_step_review .cart_item div.quantity-content {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    div#onepagecheckoutps #onepagecheckoutps_step_review .total-price-text {
+        display: none !important;
+    }
+}

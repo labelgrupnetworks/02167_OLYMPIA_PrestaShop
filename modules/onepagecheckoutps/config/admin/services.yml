@@ -1,0 +1,12 @@
+imports:
+  - { resource: ../common.yml }
+  - { resource: ../hooks.yml }
+  - { resource: hooks.yml }
+
+services:
+  onepagecheckoutps.install.installer:
+    class: 'OnePageCheckoutPS\Install\Installer'
+    arguments:
+      - '@onepagecheckoutps.module'
+      - '@onepagecheckoutps.prestashop.provider.context'
+      - '@onepagecheckoutps.prestashop.configuration'

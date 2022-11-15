@@ -1,0 +1,5 @@
+services:
+  onepagecheckoutps.hook.module_routes:
+    class: 'OnePageCheckoutPS\Hook\HookModuleRoutesService'
+    arguments:
+      - '@onepagecheckoutps.core.core_service'

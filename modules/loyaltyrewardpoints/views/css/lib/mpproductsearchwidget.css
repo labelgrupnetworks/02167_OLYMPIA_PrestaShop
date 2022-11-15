@@ -1,0 +1,20 @@
+.mp-multiselect {
+    padding-top: 40px;
+}
+
+.mp-multiselect a.product-entry {
+    border:1px solid #ccc;
+    padding:8px;
+    border-radius:2px;
+    background-color:#f7f7f7;
+    text-align:center;
+    color:#444;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.mp-multiselect a.product-entry span {
+    display: inline-block;
+    margin-right: 5px;
+}

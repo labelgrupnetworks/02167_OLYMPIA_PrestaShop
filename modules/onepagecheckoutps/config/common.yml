@@ -1,0 +1,35 @@
+services:
+  onepagecheckoutps.module:
+    class: 'OnePageCheckoutPS'
+    factory: ['Module', 'getInstanceByName']
+    arguments:
+      - 'onepagecheckoutps'
+
+  onepagecheckoutps.prestashop.provider.context:
+    class: 'OnePageCheckoutPS\Application\PrestaShop\Provider\ContextProvider'
+
+  onepagecheckoutps.prestashop.provider.shop:
+    class: 'OnePageCheckoutPS\Application\PrestaShop\Provider\ShopProvider'
+    arguments:
+      - '@onepagecheckoutps.prestashop.provider.context'
+
+  onepagecheckoutps.prestashop.configuration.resolver:
+    class: 'OnePageCheckoutPS\Application\PrestaShop\Configuration\ConfigurationOptionsResolver'
+    arguments:
+      - '@=service("onepagecheckoutps.prestashop.provider.shop").getContextShopID()'
+      - '@=service("onepagecheckoutps.prestashop.provider.shop").getContextShopGroupID()'
+
+  onepagecheckoutps.prestashop.configuration:
+    class: 'OnePageCheckoutPS\Application\PrestaShop\Configuration\Configuration'
+    arguments:
+      - '@onepagecheckoutps.prestashop.configuration.resolver'
+
+  onepagecheckoutps.core.core_service:
+    class: 'OnePageCheckoutPS\Application\Core\CoreService'
+    arguments:
+      - '@onepagecheckoutps.module'
+
+  onepagecheckoutps.core.social_network:
+    class: 'OnePageCheckoutPS\Application\Core\MyAccount\SocialNetwork'
+    arguments:
+      - '@onepagecheckoutps.module'
