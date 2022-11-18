@@ -99,7 +99,7 @@ $(document).ready(function () {
         format: kb_dateformat,
         autoclose: 1,
         weekStart: 1,
-      onRenderDay: function (date) {
+        onRenderDay: function (date) {
             var yr = date.getUTCFullYear();
             var month = date.getUTCMonth() + 1;
             var day = date.getUTCDate();

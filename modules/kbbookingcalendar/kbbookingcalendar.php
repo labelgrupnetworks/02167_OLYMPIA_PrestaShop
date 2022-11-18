@@ -48,6 +48,7 @@ class Kbbookingcalendar extends Module
         $this->description = $this->l('This plugin provide the customers to book services from your shop. It builds a schedule according to the reservations set by your customers.');
 
         $this->ps_versions_compliancy = array('min' => '1.7', 'max' => _PS_VERSION_);
+        // $this->registerHook('displayReserva');
     }
 
     public function install()
