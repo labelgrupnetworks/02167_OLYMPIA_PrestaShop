@@ -31,7 +31,7 @@
             {if $product_type != 'hotel_booking'}
                 <div class="form-group">
                     <div class="qty">
-                        {l s='Quantity:' mod='kbbookingcalendar'}&nbsp; <input autocomplete="off" style="text-align: center;" type="number" value="1" class="kb_product_qty" min="1" max="100">
+                        {l s='Quantity:' mod='kbbookingcalendar'}&nbsp; <input autocomplete="off" type="number" value="1" class="kb_product_qty" min="1" max="100">
                     </div>
                 </div>
             {/if}
@@ -147,7 +147,7 @@
         <input type="hidden" name="kb_disable_days" value="{$kbdisable_days}">
     {/if}
     {if $product_type != 'hotel_booking'}
-        <div style="text-align: center;">
+        <div>
             <button type="submit" class="btn btn-primary" id="kb-submit-booking-product-cart">{l s='Book Now' mod='kbbookingcalendar'}</button>
         </div>
     {elseif $product_type == 'hotel_booking'}
@@ -165,7 +165,7 @@
                 </div>
             </div>
         {/if}
-        <div style="text-align: center;">
+        <div>
             <script>
                 var kb_hotel_url = "{$hotel_url nofilter}";
             </script>

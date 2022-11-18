@@ -559,7 +559,12 @@
 }
 
 .booking-product-checkin-block {
-    margin: 15px 0px 0px -30px !important;
+    margin: 15px 0px 0px 0px;
+    padding: 0;
+}
+
+.booking-product-checkin-block .form-group {
+    padding: 0;
 }
 
 .booking-product-checkin-block .control-label {
@@ -574,11 +579,6 @@
     background: #ffffff url(../img/bg_calendario.png) no-repeat;
     border: 1px solid #E3E8F3;
     background-position: right 15px top 10px;
-}
-
-.kb-booking-product-block .btn {
-    float: left !important;
-    margin: -54px 0px 0px 200px !important;
 }
 
 #product #lrp-product-widget {
