@@ -69,6 +69,7 @@ class KbBookingCalendarCartModuleFrontController extends ModuleFrontController
             }
             
             if (Tools::getValue('validateQuantity')) {
+//                $data = $this->validateQuantity();
                 $data = $this->validateCheckInDate();
                  echo json_encode($data);
                 die;
@@ -298,6 +299,7 @@ class KbBookingCalendarCartModuleFrontController extends ModuleFrontController
                                 }
                             }
                         }
+
                     }
                 }
             }
@@ -555,10 +557,12 @@ class KbBookingCalendarCartModuleFrontController extends ModuleFrontController
                                     $kb_date_checkin = date('Y-m-d ' . $kbtime_slot[0], strtotime($kb_date));
                                     $kb_date_checkout = date('Y-m-d ' . $kbtime_slot[1], strtotime($kb_date));
                                     $available_qty = $this->getAvailableQuantityByProductAndTimeSlots($id_product, $kb_date_checkin, $kb_date_checkout, $qty, null, $time_slot['time']);
+//                                    $available_qty = $this->getAvailableQuantityByProduct($id_product, $kb_date_checkin, $kb_date_checkout, $qty);
                                 } else if ($product_type == 'appointment') {
                                     $available_qty = $this->getAvailableQuantityByProductAndTimeSlots($id_product, $kb_date, $kb_date, $qty, null, $time_slot['time']);
                                 } else {
                                     $available_qty = $this->getAvailableQuantityByProductAndTimeSlots($id_product, $kb_date, $kb_date, $qty, null, $time_slot['time']);
+//                                    $available_qty = $this->getAvailableQuantityByProduct($id_product, $kb_date, $kb_date, $qty);
                                 }
                                 // changes by rishabh jain
                                 if (!$available_qty) {
@@ -724,6 +728,8 @@ class KbBookingCalendarCartModuleFrontController extends ModuleFrontController
                                                         $kb_price += $this->applyKbRule($id_product, $kb_date_rec, $kb_date_rec, $rec_date['price']);
                                                     }
                                                 }
+//                                                print_r($kb_price);
+//                                                die;
                                                 if ($product_type == 'hourly_rental') {
                                                     $price = $kb_price;
                                                 }
@@ -812,6 +818,12 @@ class KbBookingCalendarCartModuleFrontController extends ModuleFrontController
                         }
                     }
                 }
+//                if (!empty($cart_details)) {
+//                    foreach ($cart_details as $cart_detail) {
+//                        $used_qty += $cart_detail['qty'];
+//                    }
+                    
+//                }
                 $available_qty = $product_qty - $used_qty;
                 if ($available_qty < 0) {
                     $available_qty = 0;
@@ -842,6 +854,7 @@ class KbBookingCalendarCartModuleFrontController extends ModuleFrontController
                                 }
                             }
                         }
+//                        if (!empty($id_cart)) {
                         $cart_details = Db::getInstance()->executeS('SELECT c.* FROM ' . _DB_PREFIX_ . 'kb_booking_product_cart c INNER JOIN ' . _DB_PREFIX_ . 'cart_product co on (co.id_cart=c.id_cart AND co.id_product=c.id_product) WHERE c.id_product=' . (int) $id_product . ' AND  ("' . pSQL($kb_range_checkin) . '" between c.check_in and c.check_out) GROUP BY c.id_customization');
                         if (!empty($cart_details)) {
                             foreach ($cart_details as $cart_key => $cart_data) {
@@ -859,6 +872,12 @@ class KbBookingCalendarCartModuleFrontController extends ModuleFrontController
                                 }
                             }
                         }
+//                        if (!empty($cart_details)) {
+//                            foreach ($cart_details as $cart_detail) {
+//                                $used_qty += $cart_detail['qty'];
+//                            }
+//                        }
+//                        }
                         $available_qty = (int) $product_qty - (int) $used_qty;
                         if ((int) $available_qty < 0) {
                             $available_qty = 0;
@@ -880,6 +899,7 @@ class KbBookingCalendarCartModuleFrontController extends ModuleFrontController
                 if (!empty($date_range)) {
                     foreach ($date_range as $range) {
                         $used_qty = 0;
+//                        $kb_range_checkin = date('Y-m-d H:i', strtotime($range));
                         $kb_range_checkin = date('Y-m-d H:i', strtotime($range));
                         
                         $order_placed = Db::getInstance()->executeS('SELECT c.*,d.is_cancelled FROM ' . _DB_PREFIX_ . 'kb_booking_product_cart c INNER JOIN ' . _DB_PREFIX_ . 'kb_booking_product_order d on (d.id_cart=c.id_cart AND c.id_product=d.`id_product` AND c.id_customization=d.id_customization) WHERE c.id_product=' . (int) $id_product . ' AND ("' . pSQL($kb_range_checkin) . '" between c.check_in and c.check_out)');
@@ -891,6 +911,11 @@ class KbBookingCalendarCartModuleFrontController extends ModuleFrontController
                             }
                         }
                         $cart_details = Db::getInstance()->executeS('SELECT c.* FROM ' . _DB_PREFIX_ . 'kb_booking_product_cart c INNER JOIN ' . _DB_PREFIX_ . 'cart_product co on (co.id_cart=c.id_cart AND co.id_product=c.id_product) WHERE c.id_product=' . (int) $id_product . ' AND  ("' . pSQL($kb_range_checkin) . '" between c.check_in and c.check_out) GROUP BY c.id_customization');
+//                        if (!empty($cart_details)) {
+//                            foreach ($cart_details as $cart_detail) {
+//                                $used_qty += $cart_detail['qty'];
+//                            }
+//                        }
                         if (!empty($cart_details)) {
                             foreach ($cart_details as $cart_key => $cart_data) {
                                 $is_exist = false;
@@ -1041,7 +1066,17 @@ class KbBookingCalendarCartModuleFrontController extends ModuleFrontController
                         }
                     }
                 }
-                $cart_details = Db::getInstance()->executeS('SELECT c.* FROM ' . _DB_PREFIX_ . 'kb_booking_product_cart c INNER JOIN ' . _DB_PREFIX_ . 'cart_product co on (co.id_cart=c.id_cart AND co.id_product=c.id_product) WHERE c.id_product=' . (int) $id_product . ' AND  c.check_in >= "' . pSQL($checkin) . '" AND c.check_out <="' . pSQL($checkout) . '"'.$time_slot_filter.' GROUP BY c.id_customization');
+                $sqlCarts='
+                    SELECT c.* 
+                    FROM ' . _DB_PREFIX_ . 'kb_booking_product_cart c 
+                    INNER JOIN ' . _DB_PREFIX_ . 'cart_product co on (co.id_cart=c.id_cart AND co.id_product=c.id_product) 
+                    WHERE 
+                        c.id_product=' . (int) $id_product . ' AND  
+                        c.check_in >= "' . pSQL($checkin) . '" AND 
+                        c.check_out <="' . pSQL($checkout) . '"'.$time_slot_filter.' AND 
+                        co.date_add >= NOW() - INTERVAL 1 DAY
+                    GROUP BY c.id_customization';
+                $cart_details = Db::getInstance()->executeS($sqlCarts);
                 if (!empty($cart_details)) {
                     foreach ($cart_details as $cart_key => $cart_data) {
                         $is_exist = false;
@@ -1109,6 +1144,7 @@ class KbBookingCalendarCartModuleFrontController extends ModuleFrontController
                                 }
                             }
                         }
+                    //    }
                         $available_qty = (int) $product_qty - (int) $used_qty;
                         if ((int) $available_qty < 0) {
                             $available_qty = 0;
@@ -1139,6 +1175,7 @@ class KbBookingCalendarCartModuleFrontController extends ModuleFrontController
                                 }
                             }
                         }
+                    //    if (!empty($id_cart)) {
                         $cart_details = Db::getInstance()->executeS('SELECT c.* FROM ' . _DB_PREFIX_ . 'kb_booking_product_cart c INNER JOIN ' . _DB_PREFIX_ . 'cart_product co on (co.id_cart=c.id_cart AND co.id_product=c.id_product) WHERE c.id_product=' . (int) $id_product . ' AND  ("' . pSQL($kb_range_checkin) . '" between c.check_in and c.check_out) GROUP BY c.id_customization');
                         if (!empty($cart_details)) {
                             foreach ($cart_details as $cart_key => $cart_data) {
@@ -1156,6 +1193,7 @@ class KbBookingCalendarCartModuleFrontController extends ModuleFrontController
                                 }
                             }
                         }
+                    //    }
                         $available_qty = (int) $product_qty - (int) $used_qty;
                         if ((int) $available_qty < 0) {
                             $available_qty = 0;
@@ -1422,7 +1460,7 @@ class KbBookingCalendarCartModuleFrontController extends ModuleFrontController
                 foreach ($indexes as $field) {
                     $value = '';
                     if ($period_type != 'date') {
-                        $kbcheck_in = $check_in . ' Slot - ' . $rec_data['time'];
+                        $kbcheck_in = date('d/m/Y', strtotime($check_in)) . ' ' . str_replace(' - ', '-', $rec_data)['time'];
                     }
                     if ($product_type == 'appointment') {
                         $check_out = date('Y-m-d 23:59:59', strtotime($check_out));

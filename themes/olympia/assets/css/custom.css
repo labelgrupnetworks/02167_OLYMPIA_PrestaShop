@@ -1109,3 +1109,15 @@ div#onepagecheckoutps span, div#onepagecheckoutps em, div#onepagecheckoutps labe
 #cart-subtotal-shipping {
     display: none;
 }
+
+.product-customization-line .label, .product-customization-line .value {
+    font-size: 12px;
+}
+
+.product-customization-line .label {
+    padding: 9px 2px 9px 15px;
+}
+
+.product-customization-line .value {
+    padding: 9px 15px 9px 2px;
+}
