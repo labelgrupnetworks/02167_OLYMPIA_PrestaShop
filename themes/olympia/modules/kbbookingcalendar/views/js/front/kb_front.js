@@ -281,8 +281,8 @@ $(document).ready(function () {
                     }
                     $('#blockcart-modal').remove();
                     $('#quantity_wanted').val($('.kb_product_qty').val());
-                    $('.add-to-cart').removeAttr('disabled');
-                    $('.add-to-cart').click();
+                    $('#main-product-wrapper .add-to-cart').removeAttr('disabled');
+                    $('#main-product-wrapper .add-to-cart').click();
                     $('.product-customization').hide();
                 } else if (rec['error'] != '') {
                     $('.booking-product-checkin-block').append('<div class="col-xs-12 alert alert-danger kb-error-message">' + rec['error'] + '</div>');
@@ -564,8 +564,8 @@ function submitRoomHotelCart() {
                         $('input[name="id_customization"]').val(rec['id_customization']);
                     }
                     $('#quantity_wanted').val($('.kb_hotel_room_qty').val());
-                    $('.add-to-cart').removeAttr('disabled');
-                    $('.add-to-cart').click();
+                    $('#main-product-wrapper .add-to-cart').removeAttr('disabled');
+                    $('#main-product-wrapper .add-to-cart').click();
                     $('#kbrenderHotelRoomBlockModel').modal('toggle');
                     $('.product-customization').hide();
                 } else if (rec['error'] != '') {
