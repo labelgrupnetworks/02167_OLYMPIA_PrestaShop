@@ -1013,7 +1013,7 @@
 }
 
 #order-detail-content * {
-    font-size: 14px !important;
+    font-size: 14px;
 }
 
 #checkout .cart-line-product-quantity, #checkout .bootstrap-touchspin .btn {
@@ -1080,7 +1080,7 @@
 }
 
 div#onepagecheckoutps span, div#onepagecheckoutps em, div#onepagecheckoutps label {
-    font-size: 15px !important;
+    font-size: 15px;
 }
 
 #checkout #cart-points-summary i {
@@ -1110,7 +1110,10 @@ div#onepagecheckoutps span, div#onepagecheckoutps em, div#onepagecheckoutps labe
     display: none;
 }
 
-.product-customization-line .label, .product-customization-line .value {
+.product-customization-line .label, 
+.product-customization-line .value, 
+#onepagecheckoutps .product-customization-line .value, 
+div#onepagecheckoutps div#onepagecheckoutps_step_review #order-detail-content .cart_description .product-customization-line .label {
     font-size: 12px;
 }
 
