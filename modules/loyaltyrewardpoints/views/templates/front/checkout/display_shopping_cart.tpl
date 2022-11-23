@@ -23,9 +23,9 @@
 *  International Property of Musaffar Patel
 *}
 
-<div id="lrp-points" class="card-block">
-	{if $points_redeemed == 0}
-		{if $points > 0}
+{if $points_redeemed == 0}
+	{if $points > 0}
+		<div id="lrp-points" class="card-block">
 			<span id="lrp-summary" class="label">
 				<i class="material-icons" style="margin-top: -2px;">card_giftcard</i>
 				{l s='You have %d points' sprintf=[$points] mod='loyaltyrewardpoints'}
@@ -36,12 +36,14 @@
 				<span class="points-label label">{l s='points' mod='loyaltyrewardpoints'}</span>
 				<a href="#lrp-redeem" id="btn-lrp-redeem" class="btn btn-secondary">{l s='redeem' mod='loyaltyrewardpoints'}</a>
 			</div>
-		{/if}
-	{else}
+		</div>
+	{/if}
+{else}
+	<div id="lrp-points" class="card-block">
 		<strong>{$points_redeemed|escape:'htmlall':'UTF-8'} {l s='points redeemed' mod='loyaltyrewardpoints'} ({$points_redeemed_value|escape:'htmlall':'UTF-8'})</strong>
 		<a href="#" id="lrp-points-clear" class="material-icons">clear</a>
-	{/if}
-</div>
+	</div>	
+{/if}
 
 <script>
 	var isOnePageCheckoutModule = document.getElementById("onepagecheckoutps")

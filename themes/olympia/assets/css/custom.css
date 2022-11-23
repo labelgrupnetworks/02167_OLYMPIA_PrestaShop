@@ -883,10 +883,6 @@
     color: #117393 !important;
 }
 
-#cart #cart-points-summary {
-    display: none;
-}
-
 #cart #lrp-points {
     background: #ffffff url(../img/bg_puntos_blanco.png) no-repeat top left;
     padding-left: 50px;
