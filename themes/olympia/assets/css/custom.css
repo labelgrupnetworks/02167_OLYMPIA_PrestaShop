@@ -151,6 +151,16 @@
     color: #324F57;
 }
 
+.block-social-links .block-title {
+    display: none;
+}
+
+.block-social-links {
+     background: url(../img/logo_azul.png) no-repeat top left;
+        min-width: 200px;
+     padding-top: 70px;
+}
+
 .block-links ul>li a:before {
     display: none !important;
 }
@@ -217,6 +227,12 @@
 
 
 /* HOME */
+.slider_olympia .swiper-button {
+    border-radius: 50px !important;
+    width: 50px !important;
+    height: 50px !important;
+}
+
 .one_product_list h4.product-title, 
 .one_product_list h4.product-title a:link:not(.nav-link):not(.btn), 
 .one_product_list h4.product-title a:visited:not(.nav-link):not(.btn) {
@@ -610,6 +626,11 @@
 }
 
 /* CONTACTO */
+#checkbox_privacy_25703 {
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
 .submit_btn_center {
     color: #ffffff !important;
     background: #117393 !important;
@@ -946,7 +967,7 @@
 }
 
 #panel_addresses_customer, #form_customer .fields_required {
-    display: none !important;
+    /*display: none !important;*/
 }
 
 #onepagecheckoutps_step_one_container .btn {
@@ -1120,3 +1141,69 @@ div#onepagecheckoutps div#onepagecheckoutps_step_review #order-detail-content .c
 .product-customization-line .value {
     padding: 9px 15px 9px 2px;
 }
+
+/* DISTINTAS RESOLUCIONES */
+@media (min-width:  0px) and (max-width:  992px) {
+
+.slider_olympia .swiper-button {
+    border-radius: 25px !important;
+    width: 25px !important;
+    height: 25px !important;
+}
+
+   .header-nav {
+    display: none;
+   }
+
+   .fa-bars {
+    color: #117393;
+   }
+
+   .categorias_home_ .elementor-row {
+    display: flex !important;
+   }
+
+   .categorias_home_ .elementor-column {
+        -ms-flex: 0 0 33.3% !important;
+    flex: 0 0 33.3% !important;
+    max-width: 33.3% !important;
+   }
+
+   #footer .col-md {
+        -ms-flex: 0 0 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+   }
+
+   .block-social-links {
+    background: url(../img/logo_azul.png) no-repeat top left;
+     padding-top: 40px;
+     margin-top: 30px;
+   }
+
+   .footer_ ul li {
+    text-align: center;
+    width: 100%;
+    font-size: 13px;
+   }
+
+   .footer_ ul li a {
+        font-size: 13px;
+   }
+
+   .block-iqitlinksmanager-6 li:last-child {
+    margin-top: 10px !important;
+    background: none;
+    padding-left: 0px;
+}
+}
+
+@media (min-width:  0px) and (max-width:  550px) {
+
+   .categorias_home_ .elementor-column {
+        -ms-flex: 0 0 50% !important;
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+   }
+}
+
