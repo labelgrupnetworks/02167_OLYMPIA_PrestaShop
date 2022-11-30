@@ -128,4 +128,61 @@ class Label_olympia extends Module
         }
         return $result;
     }
+    
+    public function sendReminderEmail($remainingDays){
+        // Comprobamos que el número de días no supere el año
+        if($remainingDays > 365){
+            return false;
+        }
+        // Comprobamos si está activo el módulo de reservas
+        if (!Module::isEnabled('kbbookingcalendar')){
+            return false;
+        }
+        if(!$this->context){
+            $this->context = Context::getContext();
+        }
+        // Obtenemos los emails de las reservas desde current_date hasta los días parametrizados
+        $sql = '
+            SELECT c.email, c.firstname, c.lastname, kpo.*, o.reference, o.date_add, kpc.check_in
+            FROM ' . _DB_PREFIX_ . 'customer c 
+            INNER JOIN ' . _DB_PREFIX_ . 'orders o ON c.id_customer = o.id_customer
+            INNER JOIN ' . _DB_PREFIX_ . 'kb_booking_product_order kpo ON o.id_order = kpo.id_order
+            INNER JOIN ' . _DB_PREFIX_ . 'kb_booking_product_cart kpc ON kpo.id_cart = kpc.id_cart
+            WHERE 
+                DATEDIFF(kpc.check_in, CURRENT_TIMESTAMP()) = ' . (int)$remainingDays . ' AND 
+                kpo.is_cancelled = 0
+            ORDER BY kpc.check_in
+        ';
+        $result = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS($sql);
+        // Enviamos un email al cliente con la información de la reserva
+        foreach ($result as $element) {
+            $templateVars = [
+                '{email}' => $element['email'],
+                '{firstname}' => $element['firstname'],
+                '{lastname}' => $element['lastname'],
+                '{order_name}' => $element['reference'],
+                '{date}' => $element['date_add'],
+                '{check_in}' => $element['check_in'],
+            ];
+            Mail::Send(
+                (int) $this->context->language->id,
+                'reservation_reminder',
+                Context::getContext()->getTranslator()->trans(
+                    'Your reservation is close',
+                    [],
+                    'Emails.Subject',
+                ),
+                $templateVars,
+                $element['email'],
+                $element['firstname'] . ' ' . $element['lastname'],
+                null,
+                null,
+                null,
+                null,
+                _PS_MAIL_DIR_,
+                false,
+                (int) $this->context->shop->id
+            );
+        }
+    }
 }
