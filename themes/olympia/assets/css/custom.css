@@ -609,6 +609,29 @@
     display: none;
 }
 
+.banner-regalo {
+    float: left;
+    width: 100%;
+    margin: 10px 0px 40px 0px;
+    background: #e7f1f4 url(../img/regalo_.jpg) no-repeat top left;
+    padding: 30px 30px 30px 120px;
+    color: #ffffff;
+}
+
+.banner-regalo .section-title {
+    border-bottom: none !important;
+    font-size: 28px !important;
+    color: #ffffff !important;
+    font-family: 'Georgia' !important;
+    padding-bottom: 0px !important;
+    margin-bottom: 20px !important;
+}
+
+.kb-booking-product-block .btn-iqitwishlist-add {
+    margin: -60px 0px 0px 140px;
+    background: #ffffff;
+    padding: 8px 15px 8px 15px;
+}
 
 /* SOBRE NOSOTROS (Y OTROS CMS) */
 #cms .page-header {
