@@ -106,6 +106,17 @@ class Label_olympia extends Module
         return $this->fetch('module:label_olympia/views/templates/hook/categories.tpl');
     }
 
+    /**
+     * Bono regalo ficha producto
+     */
+    public function hookDisplayFooterProduct(){
+        // $this->context->smarty->assign([
+        //     'info' => $info,
+        // ]);
+
+        return $this->display(__FILE__, 'views/templates/hook/bono_regalo/banner_product.tpl');
+    }
+
     private function getCategories($idLang = false, $active = true, $sqlFilter = '', $limit = '')
     {
         $context = Context::getContext();
