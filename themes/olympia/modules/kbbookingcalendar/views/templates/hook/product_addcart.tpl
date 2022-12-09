@@ -150,6 +150,7 @@
         <div>
             <button type="submit" class="btn btn-primary" id="kb-submit-booking-product-cart">{l s='Book Now' mod='kbbookingcalendar'}</button>
         </div>
+        {widget name="iqitwishlist"  hook='displayProductAdditionalInfo'}
     {elseif $product_type == 'hotel_booking'}
         {if !empty($room_category)}
             <div>
