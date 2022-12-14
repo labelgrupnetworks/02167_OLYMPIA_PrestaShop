@@ -41,7 +41,7 @@
         {if $product_type =='appointment'}
             <div class="form-group col-lg-5">
                 <label class="control-label" style="text-align: left;">
-                    {l s='Appointment Date' mod='kbbookingcalendar'}
+                    {l s='Appointment Date' d='Shop.Theme.Catalog'}
                 </label>
                 <input class="form-control" name="kb_check_in" autocomplete="off">
             </div>
