@@ -14,6 +14,9 @@
  */
 class Customer extends CustomerCore
 {
+    public $id_customer_provis;
+
+
     /*
     * module: loyaltyrewardpoints
     * date: 2022-11-10 11:23:49
@@ -21,6 +24,12 @@ class Customer extends CustomerCore
     */
     public function __construct($id = null)
     {
+        // New fields
+        $id_customer_provis = array(
+            'garantia' => array('type' => self::TYPE_STRING)
+        );
+        parent::$definition['fields'] = array_merge(parent::$definition['fields'], $id_customer_provis);
+
         parent::__construct($id);
         if (Module::isEnabled('LoyaltyRewardPoints')) {
             include_once(_PS_MODULE_DIR_ . '/loyaltyrewardpoints/lib/bootstrap.php');
