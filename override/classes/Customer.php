@@ -16,7 +16,6 @@ class Customer extends CustomerCore
 {
     public $id_customer_provis;
 
-
     /*
     * module: loyaltyrewardpoints
     * date: 2022-11-10 11:23:49
@@ -25,10 +24,10 @@ class Customer extends CustomerCore
     public function __construct($id = null)
     {
         // New fields
-        $id_customer_provis = array(
-            'garantia' => array('type' => self::TYPE_STRING)
+        $new_fields = array(
+            'id_customer_provis' => array('type' => self::TYPE_STRING)
         );
-        parent::$definition['fields'] = array_merge(parent::$definition['fields'], $id_customer_provis);
+        parent::$definition['fields'] = array_merge(parent::$definition['fields'], $new_fields);
 
         parent::__construct($id);
         if (Module::isEnabled('LoyaltyRewardPoints')) {
