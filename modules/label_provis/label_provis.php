@@ -379,7 +379,8 @@ class Label_provis extends Module
                 $request = [
                     'URL' => $url,
                     'METHOD' => $method,
-                    'AUTHORIZATION' => $this->getAuth($url, $method, $parameters)
+                    'AUTHORIZATION' => $this->getAuth($url, $method, $parameters),
+                    'PARAMETERS' => $parameters
                 ];
                 dump($request);
                 $response = $this->call($request);
@@ -393,7 +394,6 @@ class Label_provis extends Module
 
     public function call($request){
         try{
-            dump($request);
             $curl = curl_init();
             $curl_ops = array(
                 CURLOPT_URL => $request['URL'],
@@ -410,6 +410,9 @@ class Label_provis extends Module
                   $request['AUTHORIZATION']
                 ),
             );
+            if($request['METHOD'] == 'POST'){
+                $curl_ops[CURLOPT_POSTFIELDS] = json_encode($request['PARAMETERS']);
+            }
             dump($curl_ops);
             curl_setopt_array(
                 $curl,
@@ -418,10 +421,10 @@ class Label_provis extends Module
 
             $response = curl_exec($curl);
             $err = curl_error($curl);
-            // $httpcode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
-            // dump('CURLINFO_HTTP_CODE: '.$httpcode);
+            $httpcode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
             curl_close($curl);
             dump($response);
+            dump('CURLINFO_HTTP_CODE: '.$httpcode);
             return json_decode($response);
 
         } catch(Exception $ex){
@@ -435,25 +438,25 @@ class Label_provis extends Module
         $parameters = [ 
             "IDPersona"=> -1, 
             "IDInstalacion"=> $this->getIdInstallation(), 
-            "IDTipoDeCliente"=> 1, 
-            "Nif"=> "", 
-            "Sexo"=> "", 
+            "IDTipoDeCliente"=> 2, 
+            "Nif"=> "26000238A", 
+            "Sexo"=> "H", 
             "Email"=> $params['newCustomer']->email, 
             "Nombre"=> $params['newCustomer']->firstname, 
             "Apellidos"=> $params['newCustomer']->lastname, 
             "Nick"=> "", 
-            "Movil"=> "", 
+            "Movil"=> "666666666", 
             "Telefono"=> "",
-            "FechaDeNacimiento"=> $params['newCustomer']->birthday, 
-            "CP"=> "", 
-            "Direccion"=> "", 
-            "Localidad"=> "", 
+            "FechaDeNacimiento"=> $params['newCustomer']->birthday != '' ? $params['newCustomer']->birthday : '1970-01-01 00:00:00', 
+            "CP"=> "50000", 
+            "Direccion"=> "DEFAULT", 
+            "Localidad"=> "DEFAULT", 
             "IDProvincia"=> 5, 
             "CodigoPais"=> 1, 
             "CodBanco"=> "", 
             "CodSucursal"=> "", 
             "Dc"=> "11", 
-            "NumeroDeCuenta"=>"", 
+            "NumeroDeCuenta"=>"DEFAULT", 
             "PermitirNotificacionesComercialesLOPD"=> true, 
             "PermitirCompartirEnRedesSociales"=> false, 
             "PermitirCompartirDatosATerceros"=> false 
