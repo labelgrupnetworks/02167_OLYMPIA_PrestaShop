@@ -14,6 +14,18 @@
  */
 class Product extends ProductCore
 {
+    public $id_actividad_provis;
+
+    public function __construct($id = null)
+    {
+        // New fields
+        $new_fields = array(
+            'id_actividad_provis' => array('type' => self::TYPE_STRING)
+        );
+        parent::$definition['fields'] = array_merge(parent::$definition['fields'], $new_fields);
+
+        parent::__construct($id);
+    }
     /*
     * module: kbbookingcalendar
     * date: 2022-11-11 07:57:20

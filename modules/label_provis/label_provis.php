@@ -65,6 +65,7 @@ class Label_provis extends Module
 
         return parent::install() &&
             $this->registerHook('header') &&
+            $this->registerHook('actionCustomerAccountAdd') &&
             $this->registerHook('displayBackOfficeHeader');
     }
 

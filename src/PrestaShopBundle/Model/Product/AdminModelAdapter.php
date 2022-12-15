@@ -501,6 +501,7 @@ class AdminModelAdapter extends \PrestaShopBundle\Model\AdminModelAdapter
             'name' => $product->name,
             'description' => $product->description,
             'description_short' => $product->description_short,
+            'id_actividad_provis' => $product->id_actividad_provis,
             'active' => $product->active == 0 ? false : true,
             'price_shortcut' => $product->price,
             'qty_0_shortcut' => $product->getQuantity($product->id),

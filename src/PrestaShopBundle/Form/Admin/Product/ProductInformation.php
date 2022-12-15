@@ -274,6 +274,21 @@ class ProductInformation extends CommonAbstractType
                 'label' => $this->translator->trans('Short description', [], 'Admin.Catalog.Feature'),
                 'required' => false,
             ])
+            // Campo de enlace de producto con api provis
+            ->add('id_actividad_provis', FormType\TextType::class, [
+                'constraints' => [
+                    new Assert\Regex([
+                        'pattern' => '/[<>;=#{}]/',
+                        'match' => false,
+                    ]),
+                ],
+                'attr' => [
+                    'placeholder' => $this->translator->trans('Provis Activity ID', [], 'Admin.Catalog.Help'),
+                    'class' => 'edit js-edit serp-default-title',
+                ],
+                //'locales' => $this->locales,
+                'label' => $this->translator->trans('Provis Activity ID', [], 'Admin.Global'),
+            ])
             //FEATURES & ATTRIBUTES
             ->add('features', FormType\CollectionType::class, [
                 'entry_type' => ProductFeature::class,
