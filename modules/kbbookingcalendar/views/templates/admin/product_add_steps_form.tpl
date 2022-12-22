@@ -109,6 +109,7 @@
             </div>
         {/if}
         {include file={$datetime_tpl}}
+        {include file={$weekday_tpl}}
         {include file={$rooms_tpl}}
         {include file={$facilities_tpl}}
         <div class="panel-footer">
