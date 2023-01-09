@@ -14,29 +14,6 @@
     }
 
 }
-/*.modal {
-            display:    none;
-            position:   fixed;
-            z-index:    1000;
-            top:        0;
-            left:       0;
-            height:     100%;
-            width:      100%;
-            background: rgba( 255, 255, 255, .8 )
-               url(../../img/ajax-loader.gif)
-                50% 50%
-                no-repeat;
-        }*/
-/*#kb-booking-loader{
-background: url(../../img/ajax-loader.gif) no-repeat left top transparent;
-    background-size: 100% 100%;
-    position: absolute;
-    top: 61%;
-    left: 22%;
-    width: 31px;
-    height: 32px;
-    display: none;
-}*/
 #ui-datepicker-div {
     z-index: 99 !important;
 }
@@ -50,4 +27,12 @@ background: url(../../img/ajax-loader.gif) no-repeat left top transparent;
 .kb-pc-error-icon {
     margin-left: 10px;
     display: none;
+}
+
+.weekdays {
+    display:flex;
+}
+
+.weekdays .input-group {
+    margin: 5px;
 }

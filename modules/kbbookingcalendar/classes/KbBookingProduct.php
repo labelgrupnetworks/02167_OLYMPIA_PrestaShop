@@ -30,6 +30,7 @@ class KbBookingProduct extends ObjectModel
     public $price;
 //    public $start_date;
     public $date_details;
+    public $weekday_price_details;
     public $min_hours;
     public $max_hours;
     public $min_days;
@@ -41,6 +42,8 @@ class KbBookingProduct extends ObjectModel
     public $latitude;
     public $disable_days;
     public $active;
+    // Anulación de desarrollo de configuración de precio por día de la semana
+    // public $is_weekday_price_active;
     public $date_add;
     public $date_upd;
     
@@ -84,6 +87,10 @@ class KbBookingProduct extends ObjectModel
                 'validate' => 'isFloat'
             ),
             'date_details' => array(
+                'type' =>self::TYPE_HTML,
+                'validate' => 'isCleanHTML'
+            ),
+            'weekday_price_details' => array(
                 'type' =>self::TYPE_HTML,
                 'validate' => 'isCleanHTML'
             ),
@@ -135,6 +142,11 @@ class KbBookingProduct extends ObjectModel
                 'type' => self::TYPE_INT,
                 'validate' => 'isInt'
             ),
+            // Anulación de desarrollo de configuración de precio por día de la semana
+            /*'is_weekday_price_active' => array(
+                'type' => self::TYPE_INT,
+                'validate' => 'isInt'
+            ),*/
             'date_add' => array(
                 'type' => self::TYPE_DATE,
                 'validate' => 'isDate',
