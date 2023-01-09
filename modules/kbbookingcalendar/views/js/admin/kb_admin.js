@@ -19,8 +19,9 @@ $(document).ready(function () {
     if (typeof currentFormTab != 'undefined') {
         $('.tab-row.active').removeClass('active');
         $('#kb_booking_product_form').append($('#kbproduct-images'));
-        $('#fieldset_dates_3 .form-wrapper').append($('.kb-weekday-block'));
-        $('.kb-weekday-block').show();
+        // Anulación de desarrollo de configuración de precio por día de la semana
+        // $('#fieldset_dates_3 .form-wrapper').append($('.kb-weekday-block'));
+        // $('.kb-weekday-block').show();
         $('#fieldset_dates_3 .form-wrapper').append($('.kb-date-time-block'));
         $('.kb-date-time-block').show();
         $('#kb_add_product_form_tab_' + currentFormTab).show();
@@ -197,7 +198,9 @@ $(document).ready(function () {
             $('.kb_booking_time_range').find('td.kb_time_to_td').hide();
             $('.kb_booking_time_range').removeClass('col-lg-7').addClass('col-lg-3');
             $('button[name="addkbTimeField"]').hide();
-            $('.kb-weekday-block').show();
+
+            // Anulación de desarrollo de configuración de precio por día de la semana
+            // $('.kb-weekday-block').show();
             $('.kb-date-time-block').show();
             $('.kb_booking_time_range tbody').each(function () {
                 $(this).find('tr').not('tr:first').remove();
@@ -213,7 +216,8 @@ $(document).ready(function () {
             $('.kb_booking_time_range').find('td.kb_time_to_td').show();
             $('.kb_booking_time_range').removeClass('col-lg-3').addClass('col-lg-7');
             $('.kb-date-time-block').show();
-            $('.kb-weekday-block').show();
+            // Anulación de desarrollo de configuración de precio por día de la semana
+            // $('.kb-weekday-block').show();
             $('button[name="addkbTimeField"]').show();
             $('.kb_booking_time_range').show();
             if ($('input[name="kb_product_type"]').val() == 'daily_rental') {

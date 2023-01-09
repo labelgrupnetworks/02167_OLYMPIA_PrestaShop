@@ -927,7 +927,8 @@ class AdminKbBookingProductsController extends AdminKbBookingCoreController
                                 'name' => 'name'
                             ),
                         ),
-                        array(
+                        // Anulación de desarrollo de configuración de precio por día de la semana
+                        /*array(
                             'type' => 'switch',
                             'name' => 'is_weekday_price_active',
                             'label' => $this->module->l('Enable weekday prices', 'AdminKbBookingProductsController'),
@@ -942,7 +943,7 @@ class AdminKbBookingProductsController extends AdminKbBookingCoreController
                                     'value' => 0
                                 )
                             ),
-                        ),
+                        ),*/
                     ),
                 ),
             ),
@@ -1077,7 +1078,8 @@ class AdminKbBookingProductsController extends AdminKbBookingCoreController
             'longitude' => $obj->longitude,
             'address' => $obj->address,
             'enable_product_map' => $obj->enable_product_map,
-            'is_weekday_price_active' => $obj->is_weekday_price_active,
+            // Anulación de desarrollo de configuración de precio por día de la semana
+            //'is_weekday_price_active' => $obj->is_weekday_price_active,
             'min_hours' => $obj->min_hours,
             'max_hours' => $obj->max_hours,
             'max_days' => $obj->max_days,
@@ -1702,7 +1704,8 @@ class AdminKbBookingProductsController extends AdminKbBookingCoreController
 //            $posted_data['start_date'] = trim(Tools::getValue('start_date'));
 //            $posted_data['end_date'] = trim(Tools::getValue('end_date'));
             $posted_data['enable_product_map'] = Tools::getValue('enable_product_map');
-            $posted_data['is_weekday_price_active'] = Tools::getValue('is_weekday_price_active');
+            // Anulación de desarrollo de configuración de precio por día de la semana
+            // $posted_data['is_weekday_price_active'] = Tools::getValue('is_weekday_price_active');
             $posted_data['address'] = trim(Tools::getValue('address'));
             $posted_data['longitude'] = trim(Tools::getValue('longitude'));
             $posted_data['latitude'] = trim(Tools::getValue('latitude'));
@@ -1746,7 +1749,8 @@ class AdminKbBookingProductsController extends AdminKbBookingCoreController
 //                $this->object->start_date = $posted_data['start_date'];
 //                $this->object->end_date = $posted_data['end_date'];
                 $this->object->enable_product_map = $posted_data['enable_product_map'];
-                $this->object->is_weekday_price_active = $posted_data['is_weekday_price_active'];
+                // Anulación de desarrollo de configuración de precio por día de la semana
+                // $this->object->is_weekday_price_active = $posted_data['is_weekday_price_active'];
                 $this->object->address = $posted_data['address'];
                 $this->object->longitude = $posted_data['longitude'];
                 $this->object->latitude = $posted_data['latitude'];
@@ -1828,7 +1832,8 @@ class AdminKbBookingProductsController extends AdminKbBookingCoreController
                 }
             }
             $posted_data['enable_product_map'] = Tools::getValue('enable_product_map');
-            $posted_data['is_weekday_price_active'] = Tools::getValue('is_weekday_price_active');
+            // Anulación de desarrollo de configuración de precio por día de la semana
+            // $posted_data['is_weekday_price_active'] = Tools::getValue('is_weekday_price_active');
             $posted_data['address'] = trim(Tools::getValue('address'));
             $posted_data['longitude'] = trim(Tools::getValue('longitude'));
             $posted_data['latitude'] = trim(Tools::getValue('latitude'));
@@ -1917,7 +1922,8 @@ class AdminKbBookingProductsController extends AdminKbBookingCoreController
                 $this->object->weekday_price_details = $posted_data['weekday_price_details'];
 //                $this->object->end_date = $posted_data['end_date'];
                 $this->object->enable_product_map = $posted_data['enable_product_map'];
-                $this->object->is_weekday_price_active = $posted_data['is_weekday_price_active'];
+                // Anulación de desarrollo de configuración de precio por día de la semana
+                // $this->object->is_weekday_price_active = $posted_data['is_weekday_price_active'];
                 $this->object->address = $posted_data['address'];
                 $this->object->longitude = $posted_data['longitude'];
                 $this->object->latitude = $posted_data['latitude'];
