@@ -23,49 +23,49 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <div id="footer-container-main" class="footer-container footer-style-1">
+    {block name='newsletter_footer'}
+        {if $iqitTheme.f_newsletter_status == 1 && $page.page_name == 'index'}
+            <div class="newsletter">
+                <div class="container">
+                    <div class="block block-footer block-toggle block-newsletter js-block-toggle">
+                        <h5 class="block-title"><span>{l s='Newsletter' d='Shop.Warehousetheme'}</span></h5>
+                        <div class="block-content">
+                            {widget name="ps_emailsubscription" hook='displayFooter'}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {/if}
+    {/block}
     <div class="container">
-        
         <div class="row">
             {block name='hook_footer'}
                 {hook h='displayFooter'}
             {/block}
             {if $iqitTheme.f_newsletter_status == 1 || $iqitTheme.f_social_status == 1}
-            <div class="col-12  col-md-auto">
-
-                {if $iqitTheme.f_social_status == 1}
-                {block name='socials_footer'}
-                <div class="block block-footer block-toggle block-social-links js-block-toggle">
-                    <h5 class="block-title"><span>{l s='Follow us' d='Shop.Warehousetheme'}</span></h5>
-                    <div class="block-content">
-                        {include file='_elements/social-links.tpl' class='_footer'}
-                    </div>
+                <div class="col-12  col-md-auto">
+                    {if $iqitTheme.f_social_status == 1}
+                        {block name='socials_footer'}
+                            <div class="block block-footer block-toggle block-social-links js-block-toggle">
+                                <h5 class="block-title"><span>{l s='Follow us' d='Shop.Warehousetheme'}</span></h5>
+                                <div class="block-content">
+                                    {include file='_elements/social-links.tpl' class='_footer'}
+                                </div>
+                            </div>
+                        {/block}
+                    {/if}
                 </div>
-                {/block}
-                {/if}
-                {block name='newsletter_footer'}
-                {if $iqitTheme.f_newsletter_status == 1}
-                <div class="block block-footer block-toggle block-newsletter js-block-toggle">
-                    <h5 class="block-title"><span>{l s='Newsletter' d='Shop.Warehousetheme'}</span></h5>
-                    <div class="block-content">
-                        {widget name="ps_emailsubscription" hook='displayFooter'}
-                    </div>
-                </div>
-                {/if}
-                {/block}
-            </div>
             {/if}
         </div>
-        
     </div>
     <div class="footer_">
         <div class="container">
-    <div class="row">
-            {block name='hook_footer_before'}
-                {hook h='displayFooterBefore'}
-            {/block}
-        </div>
+            <div class="row">
+                {block name='hook_footer_before'}
+                    {hook h='displayFooterBefore'}
+                {/block}
+            </div>
         </div>
     </div>
-
 </div>
 {include file='_partials/_variants/footer-copyrights-1.tpl'}
