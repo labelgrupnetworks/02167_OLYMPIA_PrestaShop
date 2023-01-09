@@ -235,7 +235,6 @@ class AdminKbBookingProductsController extends AdminKbBookingCoreController
                         'suffix' => $this->module->l('/day', 'AdminKbBookingProductsController'),
                         'required' => true,
                         'col' => 2,
-//                        'desc' => $this->module->l('The additional price will be added in the actual price.'),
                         'hint' => $this->module->l('Enter the Quantity', 'AdminKbBookingProductsController'),
                     ),
                     array(
@@ -325,7 +324,6 @@ class AdminKbBookingProductsController extends AdminKbBookingCoreController
             $helper->fields_value['submitupdateProductRoom'] = true;
             $helper->fields_value['id_booking_room_facilities_map'] = $id_product_room;
         }
-//        Tools::dieObject($helper->fields_value);
         $form = $helper->generateForm(array($fields_form));
         $this->context->smarty->assign(array(
             'kb_product_room_form' => $form,
@@ -587,10 +585,6 @@ class AdminKbBookingProductsController extends AdminKbBookingCoreController
             $tax_grp[$i]['name'] = $tax_data['name'];
             $i++;
         }
-//        print_R($tax_grp);
-//        die;
-        // changes over
-//        ($kb_product_type == 'hourly_rental') ? $this->module->l('Qty', 'AdminKbBookingProductsController') : $this->module->l('/Day', 'AdminKbBookingProductsController'),
         // changes over
         $fields_form = array(
             'general' => array(
@@ -666,35 +660,6 @@ class AdminKbBookingProductsController extends AdminKbBookingCoreController
                                 'name' => 'name'
                             )
                         ),
-//                        array(
-//                            'type' => 'select',
-//                            'label' => $this->module->l('Tax Rate', 'AdminKbBookingProductsController'),
-//                            'name' => 'tax_rate',
-//                            'options' => array(
-//                                'query' => $tax_rules_groups,
-//                                'id' => 'id_tax_rules_group',
-//                                'name' => 'name'
-//                            )
-//                        ),
-//                        array(
-//                            'type' => 'select',
-//                            'label' => $this->module->l('Stock Status', 'AdminKbBookingProductsController'),
-//                            'name' => 'stock_status',
-//                            'options' => array(
-//                                'query' => array(
-//                                    array(
-//                                        'id' => 1,
-//                                        'name' => $this->module->l('In Stock', 'AdminKbBookingProductsController'),
-//                                    ),
-//                                    array(
-//                                        'id' => 0,
-//                                        'name' => $this->module->l('Out of stock', 'AdminKbBookingProductsController'),
-//                                    ),
-//                                ),
-//                                'id' => 'id',
-//                                'name' => 'name'
-//                            )
-//                        ),
                         array(
                             'type' => 'categories_select',
                             'label' => $this->module->l('Category', 'AdminKbBookingProductsController'),
@@ -751,10 +716,6 @@ class AdminKbBookingProductsController extends AdminKbBookingCoreController
                                         'id' => 'date',
                                         'name' => $this->module->l('Date', 'AdminKbBookingProductsController'),
                                     ),
-//                                    array(
-//                                        'id' => 'time',
-//                                        'name' => $this->module->l('Time'),
-//                                    ),
                                     array(
                                         'id' => 'date_time',
                                         'name' => $this->module->l('Date & Time', 'AdminKbBookingProductsController'),
@@ -769,7 +730,6 @@ class AdminKbBookingProductsController extends AdminKbBookingCoreController
                             'type' => 'text',
                             'label' => $this->module->l('Quantity', 'AdminKbBookingProductsController'),
                             'name' => 'quantity',
-//                            'suffix' => ($kb_product_type == 'hourly_rental') ? $this->module->l('Qty', 'AdminKbBookingProductsController') : $this->module->l('/Day', 'AdminKbBookingProductsController'),
                             'suffix' => $quantity_suffix,
                             'required' => true,
                             'col' => 2,
@@ -967,6 +927,23 @@ class AdminKbBookingProductsController extends AdminKbBookingCoreController
                                 'name' => 'name'
                             ),
                         ),
+                        // Anulación de desarrollo de configuración de precio por día de la semana
+                        /*array(
+                            'type' => 'switch',
+                            'name' => 'is_weekday_price_active',
+                            'label' => $this->module->l('Enable weekday prices', 'AdminKbBookingProductsController'),
+                            'hint' => $this->module->l('Enable weekday prices', 'AdminKbBookingProductsController'),
+                            'values' => array(
+                                array(
+                                    'id' => 'is_weekday_price_active_on',
+                                    'value' => 1
+                                ),
+                                array(
+                                    'id' => 'is_weekday_price_active_off',
+                                    'value' => 0
+                                )
+                            ),
+                        ),*/
                     ),
                 ),
             ),
@@ -1095,10 +1072,14 @@ class AdminKbBookingProductsController extends AdminKbBookingCoreController
             'service_type' => $obj->service_type,
             'period_type' => $obj->period_type,
             'disable_days' => Tools::jsonDecode($obj->disable_days, true),
+            'weekday_price_details' => Tools::jsonDecode($obj->weekday_price_details, true),
+            'period_type' => $obj->period_type,
             'latitude' => $obj->latitude,
             'longitude' => $obj->longitude,
             'address' => $obj->address,
             'enable_product_map' => $obj->enable_product_map,
+            // Anulación de desarrollo de configuración de precio por día de la semana
+            //'is_weekday_price_active' => $obj->is_weekday_price_active,
             'min_hours' => $obj->min_hours,
             'max_hours' => $obj->max_hours,
             'max_days' => $obj->max_days,
@@ -1115,7 +1096,12 @@ class AdminKbBookingProductsController extends AdminKbBookingCoreController
                 $fields_value[$key] = $key;
             }
         }
-
+        $weekday_price_details = Tools::jsonDecode($obj->weekday_price_details, true);
+        if (!empty($weekday_price_details)) {
+            foreach ($weekday_price_details as $key => $price) {
+                $fields_value[$key] = $price;
+            }
+        }
         foreach ($this->all_languages as $language) {
             $fields_value['product_name'][$language['id_lang']] = (!empty($kb_product)) ? $kb_product->name[$language['id_lang']] : '';
             $fields_value['short_description'][$language['id_lang']] = (!empty($kb_product)) ? $kb_product->description_short[$language['id_lang']] : '';
@@ -1139,8 +1125,6 @@ class AdminKbBookingProductsController extends AdminKbBookingCoreController
         if (!($obj = $this->loadObject(true))) {
             return;
         }
-//        print_r('uiytre');
-//        die;
         $kb_form = $this->displayAddBookingProductForm($obj);
         $obj = $this->object;
         if ((bool) $obj->id) {
@@ -1244,6 +1228,8 @@ class AdminKbBookingProductsController extends AdminKbBookingCoreController
                 'default_language' => (int) Configuration::get('PS_LANG_DEFAULT'),
                 'availibleFacilities' => $availibleFacilities,
                 'datetime_tpl' => _PS_MODULE_DIR_ . $this->module->name . '/views/templates/admin/date_time_block_product.tpl',
+                'weekday_data' => Tools::jsonDecode($obj->weekday_price_details, true),
+                'weekday_tpl' => _PS_MODULE_DIR_ . $this->module->name . '/views/templates/admin/weekday_block_product.tpl',
                 'rooms_tpl' => _PS_MODULE_DIR_ . $this->module->name . '/views/templates/admin/room_product.tpl',
                 'facilities_tpl' => _PS_MODULE_DIR_ . $this->module->name . '/views/templates/admin/facilities_product.tpl',
                 'form_url' => $this->context->link->getAdminLink('AdminKbBookingProducts', true),
@@ -1718,6 +1704,8 @@ class AdminKbBookingProductsController extends AdminKbBookingCoreController
 //            $posted_data['start_date'] = trim(Tools::getValue('start_date'));
 //            $posted_data['end_date'] = trim(Tools::getValue('end_date'));
             $posted_data['enable_product_map'] = Tools::getValue('enable_product_map');
+            // Anulación de desarrollo de configuración de precio por día de la semana
+            // $posted_data['is_weekday_price_active'] = Tools::getValue('is_weekday_price_active');
             $posted_data['address'] = trim(Tools::getValue('address'));
             $posted_data['longitude'] = trim(Tools::getValue('longitude'));
             $posted_data['latitude'] = trim(Tools::getValue('latitude'));
@@ -1761,6 +1749,8 @@ class AdminKbBookingProductsController extends AdminKbBookingCoreController
 //                $this->object->start_date = $posted_data['start_date'];
 //                $this->object->end_date = $posted_data['end_date'];
                 $this->object->enable_product_map = $posted_data['enable_product_map'];
+                // Anulación de desarrollo de configuración de precio por día de la semana
+                // $this->object->is_weekday_price_active = $posted_data['is_weekday_price_active'];
                 $this->object->address = $posted_data['address'];
                 $this->object->longitude = $posted_data['longitude'];
                 $this->object->latitude = $posted_data['latitude'];
@@ -1842,6 +1832,8 @@ class AdminKbBookingProductsController extends AdminKbBookingCoreController
                 }
             }
             $posted_data['enable_product_map'] = Tools::getValue('enable_product_map');
+            // Anulación de desarrollo de configuración de precio por día de la semana
+            // $posted_data['is_weekday_price_active'] = Tools::getValue('is_weekday_price_active');
             $posted_data['address'] = trim(Tools::getValue('address'));
             $posted_data['longitude'] = trim(Tools::getValue('longitude'));
             $posted_data['latitude'] = trim(Tools::getValue('latitude'));
@@ -1857,6 +1849,13 @@ class AdminKbBookingProductsController extends AdminKbBookingCoreController
             $posted_data['min_hours'] = trim(Tools::getValue('min_hours'));
             $posted_data['max_hours'] = trim(Tools::getValue('max_hours'));
             $posted_data['disable_days'] = Tools::jsonEncode($disable_days);
+            $weekday_price_details = array();
+            for ($i = 0; $i <= 6; $i++) {
+                if ($price = Tools::getValue('weekday_price_details_' . $i)) {
+                    $weekday_price_details['weekday_price_details_'.$i] = $price;
+                }
+            }
+            $posted_data['weekday_price_details'] = json_encode($weekday_price_details);
             $date_data = array();
             $kb_date_from = Tools::getValue('kb_date_from');
             $kb_date_to = Tools::getValue('kb_date_to');
@@ -1885,20 +1884,14 @@ class AdminKbBookingProductsController extends AdminKbBookingCoreController
                 if (!empty($kb_date_from)) {
                     $kb_time_price = Tools::getValue('kb_time_price');
                     foreach ($kb_date_from as $key => $from_date) {
-//                        $data = array();
-//                        Tools::dieObject($kb_time_price[$key][1], true);
                          $date_data[] = array(
                             'from_date' => trim($from_date),
                             'to_date' => (isset($kb_date_to) && !empty($kb_date_to[$key])) ? trim($kb_date_to[$key]) : '',
                             'price' => (isset($kb_time_price[$key][1])) ? trim($kb_time_price[$key][1]):'',
                             );
-//                        $data['from_date'] = trim($from_date);
-//                        $data['to_date'] = (isset($kb_date_to) && !empty($kb_date_to[$key])) ? trim($kb_date_to[$key]) : '';
-//                        $date_data[] = $data;
                     }
                 }
             }
-//            Tools::dieObject($date_data, true);
             $date_data = Tools::jsonEncode($date_data);
             foreach ($this->all_languages as $lang) {
                 $posted_data['product_name'][$lang['id_lang']] = trim(Tools::getValue('product_name_' . $lang['id_lang']));
@@ -1926,8 +1919,11 @@ class AdminKbBookingProductsController extends AdminKbBookingCoreController
                 $this->object->price = $posted_data['price'];
                 $this->object->date_details  = $date_data;
                 $this->object->disable_days = $posted_data['disable_days'];
+                $this->object->weekday_price_details = $posted_data['weekday_price_details'];
 //                $this->object->end_date = $posted_data['end_date'];
                 $this->object->enable_product_map = $posted_data['enable_product_map'];
+                // Anulación de desarrollo de configuración de precio por día de la semana
+                // $this->object->is_weekday_price_active = $posted_data['is_weekday_price_active'];
                 $this->object->address = $posted_data['address'];
                 $this->object->longitude = $posted_data['longitude'];
                 $this->object->latitude = $posted_data['latitude'];

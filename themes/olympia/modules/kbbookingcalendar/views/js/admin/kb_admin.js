@@ -19,9 +19,6 @@ $(document).ready(function () {
     if (typeof currentFormTab != 'undefined') {
         $('.tab-row.active').removeClass('active');
         $('#kb_booking_product_form').append($('#kbproduct-images'));
-        // Anulación de desarrollo de configuración de precio por día de la semana
-        // $('#fieldset_dates_3 .form-wrapper').append($('.kb-weekday-block'));
-        // $('.kb-weekday-block').show();
         $('#fieldset_dates_3 .form-wrapper').append($('.kb-date-time-block'));
         $('.kb-date-time-block').show();
         $('#kb_add_product_form_tab_' + currentFormTab).show();
@@ -86,13 +83,13 @@ $(document).ready(function () {
 
             },
             success: function (html) {
-                $('.kb-date-time-block .form-group .col-lg-9').find('button[name="addkbDateTimeField"]').closest('div').before(html);
+                $('.kb-date-time-block .form-group').find('button[name="addkbDateTimeField"]').closest('div').before(html);
                 if ($('select[name="period_type"]').val() == 'date') {
                     $('.kb_booking_time_range').find('th.kb_time_from_th').hide();
                     $('.kb_booking_time_range').find('th.kb_time_to_th').hide();
                     $('.kb_booking_time_range').find('td.kb_time_from_td').hide();
                     $('.kb_booking_time_range').find('td.kb_time_to_td').hide();
-                    $('.kb_booking_time_range').removeClass('col-lg-7').addClass('col-lg-3');
+                    $('.kb_booking_time_range').removeClass('col-lg-6').addClass('col-lg-3');
                     $('button[name="addkbTimeField"]').hide();
                 }
                 $('.kb_date_from,.kb_end_date').datepicker({
@@ -196,11 +193,8 @@ $(document).ready(function () {
             $('.kb_booking_time_range').find('th.kb_time_to_th').hide();
             $('.kb_booking_time_range').find('td.kb_time_from_td').hide();
             $('.kb_booking_time_range').find('td.kb_time_to_td').hide();
-            $('.kb_booking_time_range').removeClass('col-lg-7').addClass('col-lg-3');
+            $('.kb_booking_time_range').removeClass('col-lg-6').addClass('col-lg-3');
             $('button[name="addkbTimeField"]').hide();
-
-            // Anulación de desarrollo de configuración de precio por día de la semana
-            // $('.kb-weekday-block').show();
             $('.kb-date-time-block').show();
             $('.kb_booking_time_range tbody').each(function () {
                 $(this).find('tr').not('tr:first').remove();
@@ -214,10 +208,8 @@ $(document).ready(function () {
             $('.kb_booking_time_range').find('th.kb_time_to_th').show();
             $('.kb_booking_time_range').find('td.kb_time_from_td').show();
             $('.kb_booking_time_range').find('td.kb_time_to_td').show();
-            $('.kb_booking_time_range').removeClass('col-lg-3').addClass('col-lg-7');
+            $('.kb_booking_time_range').removeClass('col-lg-3').addClass('col-lg-6');
             $('.kb-date-time-block').show();
-            // Anulación de desarrollo de configuración de precio por día de la semana
-            // $('.kb-weekday-block').show();
             $('button[name="addkbTimeField"]').show();
             $('.kb_booking_time_range').show();
             if ($('input[name="kb_product_type"]').val() == 'daily_rental') {
