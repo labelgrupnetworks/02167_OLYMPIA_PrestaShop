@@ -1072,7 +1072,8 @@ class AdminKbBookingProductsController extends AdminKbBookingCoreController
             'service_type' => $obj->service_type,
             'period_type' => $obj->period_type,
             'disable_days' => Tools::jsonDecode($obj->disable_days, true),
-            'weekday_price_details' => Tools::jsonDecode($obj->weekday_price_details, true),
+            // Anulación de desarrollo de configuración de precio por día de la semana
+            // 'weekday_price_details' => Tools::jsonDecode($obj->weekday_price_details, true),
             'period_type' => $obj->period_type,
             'latitude' => $obj->latitude,
             'longitude' => $obj->longitude,
@@ -1096,12 +1097,12 @@ class AdminKbBookingProductsController extends AdminKbBookingCoreController
                 $fields_value[$key] = $key;
             }
         }
-        $weekday_price_details = Tools::jsonDecode($obj->weekday_price_details, true);
+        /*$weekday_price_details = Tools::jsonDecode($obj->weekday_price_details, true);
         if (!empty($weekday_price_details)) {
             foreach ($weekday_price_details as $key => $price) {
                 $fields_value[$key] = $price;
             }
-        }
+        }*/
         foreach ($this->all_languages as $language) {
             $fields_value['product_name'][$language['id_lang']] = (!empty($kb_product)) ? $kb_product->name[$language['id_lang']] : '';
             $fields_value['short_description'][$language['id_lang']] = (!empty($kb_product)) ? $kb_product->description_short[$language['id_lang']] : '';
@@ -1228,7 +1229,8 @@ class AdminKbBookingProductsController extends AdminKbBookingCoreController
                 'default_language' => (int) Configuration::get('PS_LANG_DEFAULT'),
                 'availibleFacilities' => $availibleFacilities,
                 'datetime_tpl' => _PS_MODULE_DIR_ . $this->module->name . '/views/templates/admin/date_time_block_product.tpl',
-                'weekday_data' => Tools::jsonDecode($obj->weekday_price_details, true),
+                // Anulación de desarrollo de configuración de precio por día de la semana
+                // 'weekday_data' => Tools::jsonDecode($obj->weekday_price_details, true),
                 'weekday_tpl' => _PS_MODULE_DIR_ . $this->module->name . '/views/templates/admin/weekday_block_product.tpl',
                 'rooms_tpl' => _PS_MODULE_DIR_ . $this->module->name . '/views/templates/admin/room_product.tpl',
                 'facilities_tpl' => _PS_MODULE_DIR_ . $this->module->name . '/views/templates/admin/facilities_product.tpl',
@@ -1849,13 +1851,14 @@ class AdminKbBookingProductsController extends AdminKbBookingCoreController
             $posted_data['min_hours'] = trim(Tools::getValue('min_hours'));
             $posted_data['max_hours'] = trim(Tools::getValue('max_hours'));
             $posted_data['disable_days'] = Tools::jsonEncode($disable_days);
-            $weekday_price_details = array();
+            // Anulación de desarrollo de configuración de precio por día de la semana
+            /*$weekday_price_details = array();
             for ($i = 0; $i <= 6; $i++) {
                 if ($price = Tools::getValue('weekday_price_details_' . $i)) {
                     $weekday_price_details['weekday_price_details_'.$i] = $price;
                 }
             }
-            $posted_data['weekday_price_details'] = json_encode($weekday_price_details);
+            $posted_data['weekday_price_details'] = json_encode($weekday_price_details);*/
             $date_data = array();
             $kb_date_from = Tools::getValue('kb_date_from');
             $kb_date_to = Tools::getValue('kb_date_to');
@@ -1919,10 +1922,10 @@ class AdminKbBookingProductsController extends AdminKbBookingCoreController
                 $this->object->price = $posted_data['price'];
                 $this->object->date_details  = $date_data;
                 $this->object->disable_days = $posted_data['disable_days'];
-                $this->object->weekday_price_details = $posted_data['weekday_price_details'];
+                // Anulación de desarrollo de configuración de precio por día de la semana
+                // $this->object->weekday_price_details = $posted_data['weekday_price_details'];
 //                $this->object->end_date = $posted_data['end_date'];
                 $this->object->enable_product_map = $posted_data['enable_product_map'];
-                // Anulación de desarrollo de configuración de precio por día de la semana
                 // $this->object->is_weekday_price_active = $posted_data['is_weekday_price_active'];
                 $this->object->address = $posted_data['address'];
                 $this->object->longitude = $posted_data['longitude'];
