@@ -16,7 +16,7 @@ class Product extends ProductCore
 {
     public $id_actividad_provis;
 
-    public function __construct($id = null)
+    public function __construct($id_product = null, $full = false, $id_lang = null, $id_shop = null, Context $context = null)
     {
         // New fields
         $new_fields = array(
@@ -24,7 +24,7 @@ class Product extends ProductCore
         );
         parent::$definition['fields'] = array_merge(parent::$definition['fields'], $new_fields);
 
-        parent::__construct($id);
+        parent::__construct($id_product, $full, $id_lang, $id_shop, $context);
     }
     /*
     * module: kbbookingcalendar
